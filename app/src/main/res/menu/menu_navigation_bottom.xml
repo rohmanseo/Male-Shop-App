@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/home"
+        app:showAsAction="always"
+        app:labelVisibilityMode="labeled"
+        android:title="Home" />
+    <item
+        android:id="@+id/navigation_category"
+        android:icon="@drawable/category"
+        app:showAsAction="always"
+        app:labelVisibilityMode="labeled"
+        android:title="Category" />
+    <item
+        android:id="@+id/navigation_cart"
+        android:icon="@drawable/cart"
+        app:showAsAction="always"
+        app:labelVisibilityMode="labeled"
+        android:title="Cart" />
+    <item
+        android:id="@+id/navigation_wishlist"
+        android:icon="@drawable/wishlist"
+        app:showAsAction="always"
+        app:labelVisibilityMode="labeled"
+        android:title="Wishlist" />
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/profile"
+        app:showAsAction="always"
+        app:labelVisibilityMode="labeled"
+        android:title="Profile" />
+</menu>
