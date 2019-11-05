@@ -21,14 +21,6 @@ public class HomeFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_home,container,false);
 
-        button = view.findViewById(R.id.btn_login);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(container.getContext(),LoginActivity.class));
-            }
-        });
-
         return view;
     }
 }
