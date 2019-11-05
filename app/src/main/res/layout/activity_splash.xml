@@ -13,11 +13,13 @@
         android:gravity="center"
         >
         <ImageView
+            android:id="@+id/logo"
             android:src="@drawable/logo"
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:layout_gravity="center"/>
         <TextView
+            android:id="@+id/brand"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
