@@ -50,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.navigation_profile:
                         selectedFragment = new ProfileFragment();
-
                         break;
 
                 }
