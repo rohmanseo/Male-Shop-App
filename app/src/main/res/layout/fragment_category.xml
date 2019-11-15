@@ -7,17 +7,23 @@
 
 
     <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tablayout-id"
+        android:id="@+id/tablayout_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
         app:tabMode="fixed"
+        app:tabTextColor="@android:color/holo_green_light"
         app:tabGravity="fill"
         />
+
     <androidx.viewpager.widget.ViewPager
+        android:layout_below="@id/tablayout_id"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/viewPager_id"
-        />
+        android:id="@+id/viewPager_id"/>
+
+
+
 
 
 
