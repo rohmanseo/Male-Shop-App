@@ -1,12 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tablayout_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:text="Fragment Category"/>
+        android:background="@android:color/darker_gray"
+        app:tabMode="fixed"
+        app:tabTextColor="@android:color/holo_green_light"
+        app:tabGravity="fill"
+        />
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_below="@id/tablayout_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/viewPager_id"/>
+
+
+
+
+
 
 </LinearLayout>
