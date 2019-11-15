@@ -47,6 +47,7 @@ public class HomeFragment extends Fragment {
 
 
 
+
         sliderpager = view.findViewById(R.id.slider_pager);
         indicator = view.findViewById(R.id.indicator);
         recyclerView=view.findViewById(R.id.rv_Arrival);
@@ -63,10 +64,7 @@ public class HomeFragment extends Fragment {
 
         indicator.setupWithViewPager(sliderpager,true);
 
-        //setup timer
-//         Timer timer = new Timer();
-//         timer.scheduleAtFixedRate(new HomeFragment.SliderTimer(),4000,6000);
-//         indicator.setupWithViewPager(sliderpager,true);
+
 
 
          //data
@@ -116,26 +114,11 @@ public class HomeFragment extends Fragment {
         },4000,4000);
 
 
+
         return view;
 
 
     }
-//        class SliderTimer extends TimerTask {
-//            @Override
-//            public void run() {
-//                getActivity().runOnUiThread(new Runnable() {
-//                    @Override
-//                    public void run() {
-//                        if(sliderpager.getCurrentItem()<lstSlides.size()-1){
-//                            sliderpager.setCurrentItem(sliderpager.getCurrentItem()+1);
-//                        }else {
-//                            sliderpager.setCurrentItem(0);
-//                        }
-//                    }
-//                });
-//
-//            }
-//        }
-//
+
 
 }

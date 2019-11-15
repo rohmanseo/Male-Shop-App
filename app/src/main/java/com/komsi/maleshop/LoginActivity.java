@@ -18,7 +18,10 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         tvDaftar = findViewById(R.id.tv_daftar);
+
         btnLogin= findViewById(R.id.btn_login);
+
+
 
 
         tvDaftar.setOnClickListener(new View.OnClickListener() {
@@ -33,9 +36,6 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(new Intent(LoginActivity.this,MainActivity.class));
             }
         });
-
-
-
 
     }
 }
