@@ -10,24 +10,26 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.List;
 
-public class RecyclerViewAdapterKaos extends RecyclerView.Adapter<RecyclerViewAdapterKaos.MyViewHolder> {
-    private Context mContext;
-    private List<KaosKategori> mData;
+public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder> {
+     Context mContext;
+     List<Produk> mData;
 
 
-    public RecyclerViewAdapterKaos(Context mcontext, List<KaosKategori> mData) {
+    public RecyclerViewAdapter(Context mContext, List<Produk> mData) {
         this.mContext = mContext;
-        this.mData = mData;
+        this.mData =mData;
     }
 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view;
-        LayoutInflater mInflater = LayoutInflater.from(mContext);
-        view = mInflater.inflate(R.layout.cardview_item_kaos,parent,false);
+
+       View view = LayoutInflater.from(mContext).inflate(R.layout.cardview_item_kaos,parent,false);
+
 
         return new MyViewHolder(view);
     }
@@ -35,7 +37,7 @@ public class RecyclerViewAdapterKaos extends RecyclerView.Adapter<RecyclerViewAd
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.tv_kaos_merk.setText(mData.get(position).getMerk());
-        holder.img_kaos.setImageResource(mData.get(position).getThumbnail());
+        Glide.with(mContext).load(mData.get(position).getThumbnail()).into(holder.img_kaos);
         holder.tv_kaos_harga.setText(mData.get(position).getHarga());
     }
 
