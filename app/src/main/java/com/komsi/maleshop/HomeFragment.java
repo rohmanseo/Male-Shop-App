@@ -25,55 +25,52 @@ public class HomeFragment extends Fragment {
 
     Button button;
     ViewPager viewPager;
-    private List<Slide> lstSlides;
-    private ViewPager sliderpager;
-    private TabLayout indicator;
-    private RecyclerView recyclerView;
     SliderPagerAdapter adapter;
     Handler handler;
     Runnable runnable;
     Timer timer;
-
+    private List<Slide> lstSlides;
+    private ViewPager sliderpager;
+    private TabLayout indicator;
+    private RecyclerView recyclerView;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_home,container,false);
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
 
         sliderpager = view.findViewById(R.id.slider_pager);
         indicator = view.findViewById(R.id.indicator);
-        recyclerView=view.findViewById(R.id.rv_Arrival);
+        recyclerView = view.findViewById(R.id.rv_Arrival);
 
 
         lstSlides = new ArrayList<>();
-        lstSlides.add(new Slide(R.drawable.slide1,"Slide pertama"));
-        lstSlides.add(new Slide(R.drawable.slide2,"Slide kedua"));
-        lstSlides.add(new Slide(R.drawable.slide3,"Slide Ketiga"));
-        lstSlides.add(new Slide(R.drawable.slide4,"Slide keempat"));
+        lstSlides.add(new Slide(R.drawable.slide1, "Slide pertama"));
+        lstSlides.add(new Slide(R.drawable.slide2, "Slide kedua"));
+        lstSlides.add(new Slide(R.drawable.slide3, "Slide Ketiga"));
+        lstSlides.add(new Slide(R.drawable.slide4, "Slide keempat"));
 
-        adapter = new SliderPagerAdapter(this.getActivity(),lstSlides);
+        adapter = new SliderPagerAdapter(this.getActivity(), lstSlides);
         sliderpager.setAdapter(adapter);
 
-        indicator.setupWithViewPager(sliderpager,true);
+        indicator.setupWithViewPager(sliderpager, true);
 
 
+        //data
+
+        List<Produk> lstArrival = new ArrayList<>();
+        lstArrival.add(new Produk("1", "Tolliver-x", R.drawable.bg1, "Rp 400.000", "-", 0.0, "-"));
+        lstArrival.add(new Produk("2", "AutivFixin", R.drawable.bg2, "Rp 450.000", "-", 0.0, "-"));
+        lstArrival.add(new Produk("1", "Banana Republic", R.drawable.bg3, "Rp 300.000", "-", 0.0, "-"));
+        lstArrival.add(new Produk("1", "hemmeh", R.drawable.bg4, "Rp 500.000", "-", 0.0, "-"));
+        lstArrival.add(new Produk("1", "hmgoeppod", R.drawable.bg5, "Rp 650.000", "-", 0.0, "-"));
+        lstArrival.add(new Produk("2", "jackNicklaus", R.drawable.bg6, "Rp 325.000", "-", 0.0, "-"));
 
 
-         //data
-
-        List<Produk>lstArrival = new ArrayList<>();
-        lstArrival.add(new Produk("1","Tolliver-x",R.drawable.bg1,"Rp 400.000","-",0.0,"-"));
-        lstArrival.add(new Produk("2","AutivFixin",R.drawable.bg2,"Rp 450.000","-",0.0,"-") );
-        lstArrival.add(new Produk("1","Banana Republic",R.drawable.bg3,"Rp 300.000","-",0.0,"-"));
-        lstArrival.add(new Produk("1","hemmeh",R.drawable.bg4,"Rp 500.000","-",0.0,"-"));
-        lstArrival.add(new Produk("1","hmgoeppod",R.drawable.bg5,"Rp 650.000","-",0.0,"-"));
-        lstArrival.add(new Produk("2","jackNicklaus",R.drawable.bg6,"Rp 325.000","-",0.0,"-"));
-
-
-        RvArrivalAdapter arrivalAdapter= new RvArrivalAdapter(this.getActivity(),lstArrival);
+        RvArrivalAdapter arrivalAdapter = new RvArrivalAdapter(this.getActivity(), lstArrival);
         recyclerView.setAdapter(arrivalAdapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this.getActivity(),LinearLayoutManager.HORIZONTAL,false));
+        recyclerView.setLayoutManager(new LinearLayoutManager(this.getActivity(), LinearLayoutManager.HORIZONTAL, false));
 
 
         handler = new Handler();
@@ -82,17 +79,17 @@ public class HomeFragment extends Fragment {
             @Override
             public void run() {
 
-                int i =     sliderpager.getCurrentItem();
+                int i = sliderpager.getCurrentItem();
 
-                if (i==adapter.mList.size()-1){
+                if (i == adapter.mList.size() - 1) {
 
-                    i=0;
-                    sliderpager.setCurrentItem(i,true);
+                    i = 0;
+                    sliderpager.setCurrentItem(i, true);
 
-                }else {
+                } else {
 
                     i++;
-                    sliderpager.setCurrentItem(i,true);
+                    sliderpager.setCurrentItem(i, true);
                 }
             }
         };
@@ -104,7 +101,7 @@ public class HomeFragment extends Fragment {
 
                 handler.post(runnable);
             }
-        },4000,4000);
+        }, 4000, 4000);
 
 
         return view;
