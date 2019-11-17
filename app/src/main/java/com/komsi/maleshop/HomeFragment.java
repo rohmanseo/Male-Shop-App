@@ -1,13 +1,11 @@
 package com.komsi.maleshop;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -22,8 +20,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
-
-import static android.view.View.*;
 
 public class HomeFragment extends Fragment {
 
@@ -66,13 +62,13 @@ public class HomeFragment extends Fragment {
 
          //data
 
-        List<RvNewArrival>lstArrival = new ArrayList<>();
-        lstArrival.add(new RvNewArrival("Tolliver-x",R.drawable.bg1,"Rp 400.000"));
-        lstArrival.add(new RvNewArrival("AutivFixin",R.drawable.bg2,"Rp 450.000") );
-        lstArrival.add(new RvNewArrival("Banana Republic",R.drawable.bg3,"Rp 300.000"));
-        lstArrival.add(new RvNewArrival("hemmeh",R.drawable.bg4,"Rp 500.000"));
-        lstArrival.add(new RvNewArrival("hmgoeppod",R.drawable.bg5,"Rp 650.000"));
-        lstArrival.add(new RvNewArrival("jackNicklaus",R.drawable.bg6,"Rp 325.000"));
+        List<Produk>lstArrival = new ArrayList<>();
+        lstArrival.add(new Produk("1","Tolliver-x",R.drawable.bg1,"Rp 400.000","-",0.0,"-"));
+        lstArrival.add(new Produk("2","AutivFixin",R.drawable.bg2,"Rp 450.000","-",0.0,"-") );
+        lstArrival.add(new Produk("1","Banana Republic",R.drawable.bg3,"Rp 300.000","-",0.0,"-"));
+        lstArrival.add(new Produk("1","hemmeh",R.drawable.bg4,"Rp 500.000","-",0.0,"-"));
+        lstArrival.add(new Produk("1","hmgoeppod",R.drawable.bg5,"Rp 650.000","-",0.0,"-"));
+        lstArrival.add(new Produk("2","jackNicklaus",R.drawable.bg6,"Rp 325.000","-",0.0,"-"));
 
 
         RvArrivalAdapter arrivalAdapter= new RvArrivalAdapter(this.getActivity(),lstArrival);
