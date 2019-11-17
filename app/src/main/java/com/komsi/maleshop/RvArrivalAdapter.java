@@ -1,6 +1,7 @@
 package com.komsi.maleshop;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.bumptech.glide.Glide;
 
 import java.util.List;
 
@@ -36,7 +39,13 @@ public class RvArrivalAdapter extends RecyclerView.Adapter<RvArrivalAdapter.MyVi
     public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, int i) {
         myViewHolder.merk.setText(mData.get(i).getMerk());
         myViewHolder.harga.setText(mData.get(i).getHarga());
-        myViewHolder.imgArrival.setImageResource(mData.get(i).getThumbnail());
+        Glide.with(context).load(mData.get(i).getThumbnail()).into(myViewHolder.imgArrival);
+        myViewHolder.imgArrival.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                context.startActivity(new Intent(context,DetailActivity.class));
+            }
+        });
 
     }
 
@@ -50,6 +59,7 @@ public class RvArrivalAdapter extends RecyclerView.Adapter<RvArrivalAdapter.MyVi
         private TextView merk;
         private TextView harga;
         private ImageView imgArrival;
+
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             merk= itemView.findViewById(R.id.item_merk_arrival);
