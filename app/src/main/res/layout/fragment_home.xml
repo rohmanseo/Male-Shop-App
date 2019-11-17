@@ -12,32 +12,17 @@
         android:background="#F8F4F4"
         >
 
-         <ImageView
-
-            android:id="@+id/icSearch"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/icon_search"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="5dp"
-            />
-        <EditText
-
-            android:id="@+id/iccari"
-            android:layout_marginLeft="0dp"
-            android:layout_toRightOf="@id/icSearch"
+        <SearchView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="15dp"
-            android:inputType="text"
-            android:imeOptions="actionSearch"
-            android:hint="Search "
+            android:id="@+id/search_bar"
             />
+
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/slider_pager"
             android:layout_width="match_parent"
             android:layout_height="183dp"
-            android:layout_below="@id/iccari"
+            android:layout_below="@id/search_bar"
 
             >
 
