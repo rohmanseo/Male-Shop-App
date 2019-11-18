@@ -1,12 +1,239 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_marginTop="20dp">
 
     <TextView
+        android:id="@+id/tv_cart1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="20dp"
+        android:text="Cart"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/iv_image1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/tv_cart1"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/btn_edit" />
+
+    <ImageView
+        android:id="@+id/iv_image2"
+        android:layout_marginTop="20dp"
+        android:layout_width="122dp"
+        android:layout_height="146dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/tv_cart1"
+        android:src="@drawable/produk"
+        />
+
+    <TextView
+        android:id="@+id/tv_cart2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="65dp"
+        android:layout_toRightOf="@id/iv_image2"
+        android:text="Cardinal"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_cart3"
+        android:layout_below="@id/tv_cart2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/iv_image2"
+        android:text="Color: white"
+        android:textColor="#000000"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/tv_cart4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_cart3"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/iv_image2"
+        android:text="Size: XL"
+        android:textColor="#000000"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/tv_cart5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_cart4"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="65dp"
+        android:layout_toRightOf="@id/iv_image2"
+        android:text="Rp 400.000"
+        android:textColor="#000000"
+        android:textSize="10sp" />
+
+    <ImageView
+        android:id="@+id/iv_image3"
+        android:layout_width="122dp"
+        android:layout_height="146dp"
+        android:layout_below="@id/iv_image2"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/bg3" />
+
+    <TextView
+        android:id="@+id/tv_cart6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/tv_cart5"
+        android:layout_toRightOf="@id/iv_image3"
+        android:text="Adidas"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_cart7"
+        android:layout_below="@id/tv_cart6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/iv_image2"
+        android:text="Color: blue"
+        android:textColor="#000000"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/tv_cart8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_cart7"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/iv_image2"
+        android:text="Size: L"
+        android:textColor="#000000"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/tv_cart9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_cart8"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="70dp"
+        android:layout_toRightOf="@id/iv_image2"
+        android:text="Rp 250.000"
+        android:textColor="#000000"
+        android:textSize="10sp" />
+
+    <ImageView
+        android:id="@+id/iv_image4"
+        android:layout_width="122dp"
+        android:layout_height="146dp"
+        android:layout_below="@id/iv_image3"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/bg4" />
+
+    <TextView
+        android:id="@+id/tv_cart10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/tv_cart9"
+        android:layout_toRightOf="@id/iv_image3"
+        android:text="Levi's The Trucker Jacket"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_cart11"
+        android:layout_below="@id/tv_cart10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/iv_image2"
+        android:text="Color: denim dark"
+        android:textColor="#000000"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/tv_cart12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_cart11"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/iv_image2"
+        android:text="Size: L"
+        android:textColor="#000000"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/tv_cart13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_cart12"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="70dp"
+        android:layout_toRightOf="@id/iv_image2"
+        android:text="Rp 625.000"
+        android:textColor="#000000"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/tv_cart14"
+        android:layout_below="@id/iv_image4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:layout_marginLeft="20dp"
+        android:text="Total"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_cart15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_cart13"
+        android:layout_marginLeft="235dp"
+        android:layout_marginTop="75dp"
+        android:layout_toRightOf="@id/tv_cart14"
+        android:text="Rp 625.000"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:text="Fragment Cart"/>
+        android:layout_below="@id/tv_cart15"
+        android:layout_marginTop="20dp"
+        android:background="#1b2a49"
+        android:text="CheckOut"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        android:textStyle="bold" />
 
-</LinearLayout>
+
+</RelativeLayout>
