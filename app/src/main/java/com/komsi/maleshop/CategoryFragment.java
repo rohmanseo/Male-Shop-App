@@ -34,13 +34,13 @@ public class CategoryFragment extends Fragment {
         adapterKategori = new ViewPagerAdapterKategori(getFragmentManager());
 
         adapterKategori.addFragment(new KaosKategori(),("Kaos"));
-        adapterKategori.addFragment(new KaosKategori(),("test"));
-        adapterKategori.addFragment(new KaosKategori(),("test"));
-        adapterKategori.addFragment(new KaosKategori(),("test"));
-        adapterKategori.addFragment(new KaosKategori(),("test"));
-        adapterKategori.addFragment(new KaosKategori(),("test"));
-        adapterKategori.addFragment(new KaosKategori(),("test"));
-        adapterKategori.addFragment(new KaosKategori(),("test"));
+        adapterKategori.addFragment(new KemejaKategori(),("Kemeja"));
+        adapterKategori.addFragment(new PoloKategori(),("Polo"));
+        adapterKategori.addFragment(new OutwearKategori(),("Outwear"));
+        adapterKategori.addFragment(new CelenapanjangKategori(),("Celana Panjang "));
+        adapterKategori.addFragment(new CelanapendekKategori(),("Celana Pendek"));
+        adapterKategori.addFragment(new UnderwearKategori(),("Underwear"));
+
 
 
         viewPager .setAdapter(adapterKategori);
