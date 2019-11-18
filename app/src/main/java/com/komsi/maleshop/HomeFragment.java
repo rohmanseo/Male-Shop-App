@@ -1,11 +1,13 @@
 package com.komsi.maleshop;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -29,6 +31,7 @@ public class HomeFragment extends Fragment {
     Handler handler;
     Runnable runnable;
     Timer timer;
+    TextView seeAll;
     private List<Slide> lstSlides;
     private ViewPager sliderpager;
     private TabLayout indicator;
@@ -43,6 +46,16 @@ public class HomeFragment extends Fragment {
         sliderpager = view.findViewById(R.id.slider_pager);
         indicator = view.findViewById(R.id.indicator);
         recyclerView = view.findViewById(R.id.rv_Arrival);
+        seeAll=view.findViewById(R.id.text_seeArrival);
+
+        seeAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeFragment.this.getActivity(),activity_arrival.class));
+            }
+        });
+
+
 
 
         lstSlides = new ArrayList<>();
