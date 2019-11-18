@@ -40,7 +40,7 @@ public class RvArrivalAdapter extends RecyclerView.Adapter<RvArrivalAdapter.MyVi
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, int i) {
-        myViewHolder.merk.setText(mData.get(i).getMerk());
+        myViewHolder.merk.setText(mData.get(i).getNama());
         myViewHolder.harga.setText(mData.get(i).getHarga());
         Glide.with(context).load(mData.get(i).getThumbnail()).into(myViewHolder.imgArrival);
         myViewHolder.imgArrival.setOnClickListener(new View.OnClickListener() {
