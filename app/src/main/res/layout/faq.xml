@@ -56,7 +56,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/btn_faq3"
-        android:layout_leftHorizontal="true"
         android:layout_marginTop="10dp"
         android:background="#ebebe3"
         android:text="Bagaimana cara pembayaran di Male.shop?"
@@ -69,7 +68,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/btn_faq4"
-        android:layout_leftHorizontal="true"
         android:layout_marginTop="30dp"
         android:text="Apakah ada pertanyaan lainnya?"
         android:textSize="25sp"
@@ -121,7 +119,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/btn_lain1"
-        android:layout_leftHorizontal="true"
         android:layout_marginTop="50dp"
         android:text="Layanan Pelanggan 24 Jam, Senin s/d Minggu,
         termasuk Hari Libur Nasional."
