@@ -1,15 +1,16 @@
-package com.komsi.maleshop;
+package com.komsi.maleshop.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class Splash extends AppCompatActivity {
+import com.komsi.maleshop.R;
+import com.komsi.maleshop.activity.LoginActivity;
+
+public class SplashActivity extends AppCompatActivity {
     private TextView textView;
     private ImageView imageView;
 
@@ -20,7 +21,7 @@ public class Splash extends AppCompatActivity {
 
 
 
-        final Intent intent = new Intent(this,LoginActivity.class);
+        final Intent intent = new Intent(this, LoginActivity.class);
         Thread timer =new Thread(){
             public void run (){
              try{

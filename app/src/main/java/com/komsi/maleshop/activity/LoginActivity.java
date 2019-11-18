@@ -1,4 +1,4 @@
-package com.komsi.maleshop;
+package com.komsi.maleshop.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.komsi.maleshop.R;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -27,7 +29,7 @@ public class LoginActivity extends AppCompatActivity {
         tvDaftar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(LoginActivity.this,SignUpActivity.class));
+                startActivity(new Intent(LoginActivity.this, SignUpActivity.class));
             }
         });
         btnLogin.setOnClickListener(new View.OnClickListener() {
