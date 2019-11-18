@@ -4,31 +4,31 @@
 
     <item
         android:id="@+id/navigation_home"
-        android:icon="@drawable/home"
+        android:icon="@drawable/ic_home_black_24dp"
         app:showAsAction="always"
         app:labelVisibilityMode="labeled"
         android:title="Home" />
     <item
         android:id="@+id/navigation_category"
-        android:icon="@drawable/category"
+        android:icon="@drawable/ic_list_black_24dp"
         app:showAsAction="always"
         app:labelVisibilityMode="labeled"
         android:title="Category" />
     <item
         android:id="@+id/navigation_cart"
-        android:icon="@drawable/cart"
+        android:icon="@drawable/ic_shopping_cart_black_24dp"
         app:showAsAction="always"
         app:labelVisibilityMode="labeled"
         android:title="Cart" />
     <item
         android:id="@+id/navigation_wishlist"
-        android:icon="@drawable/wishlist"
+        android:icon="@drawable/ic_favorite_black_24dp"
         app:showAsAction="always"
         app:labelVisibilityMode="labeled"
         android:title="Wishlist" />
     <item
         android:id="@+id/navigation_profile"
-        android:icon="@drawable/profile"
+        android:icon="@drawable/ic_person_black_24dp"
         app:showAsAction="always"
         app:labelVisibilityMode="labeled"
         android:title="Profile" />
