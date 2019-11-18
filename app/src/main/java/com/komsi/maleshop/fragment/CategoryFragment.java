@@ -1,4 +1,4 @@
-package com.komsi.maleshop;
+package com.komsi.maleshop.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,9 +12,8 @@ import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.komsi.maleshop.R;
+import com.komsi.maleshop.adapter.ViewPagerAdapterKategori;
 
 public class CategoryFragment extends Fragment {
     TabLayout tabLayout;

@@ -1,8 +1,7 @@
-package com.komsi.maleshop;
+package com.komsi.maleshop.activity;
 
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,6 +9,12 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.komsi.maleshop.fragment.CartFragment;
+import com.komsi.maleshop.fragment.CategoryFragment;
+import com.komsi.maleshop.fragment.HomeFragment;
+import com.komsi.maleshop.fragment.ProfileFragment;
+import com.komsi.maleshop.R;
+import com.komsi.maleshop.fragment.WishlistFragment;
 
 public class MainActivity extends AppCompatActivity {
 

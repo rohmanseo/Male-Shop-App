@@ -1,4 +1,4 @@
-package com.komsi.maleshop;
+package com.komsi.maleshop.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,6 +12,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.komsi.maleshop.R;
+import com.komsi.maleshop.activity.DetailActivity;
+import com.komsi.maleshop.model.Produk;
 
 import java.util.List;
 
@@ -43,7 +46,7 @@ public class RvArrivalAdapter extends RecyclerView.Adapter<RvArrivalAdapter.MyVi
         myViewHolder.imgArrival.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                context.startActivity(new Intent(context,DetailActivity.class));
+                context.startActivity(new Intent(context, DetailActivity.class));
             }
         });
 

@@ -1,4 +1,4 @@
-package com.komsi.maleshop;
+package com.komsi.maleshop.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,6 +17,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
+import com.komsi.maleshop.model.Produk;
+import com.komsi.maleshop.R;
+import com.komsi.maleshop.adapter.RvArrivalAdapter;
+import com.komsi.maleshop.model.Slide;
+import com.komsi.maleshop.activity.activity_arrival;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -51,7 +56,7 @@ public class HomeFragment extends Fragment {
         seeAll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(HomeFragment.this.getActivity(),activity_arrival.class));
+                startActivity(new Intent(HomeFragment.this.getActivity(), activity_arrival.class));
             }
         });
 

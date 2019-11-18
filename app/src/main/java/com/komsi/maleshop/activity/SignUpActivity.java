@@ -1,8 +1,10 @@
-package com.komsi.maleshop;
+package com.komsi.maleshop.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.komsi.maleshop.R;
 
 public class SignUpActivity extends AppCompatActivity {
 

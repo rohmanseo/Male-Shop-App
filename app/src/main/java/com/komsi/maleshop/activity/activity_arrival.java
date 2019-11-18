@@ -1,33 +1,27 @@
-package com.komsi.maleshop;
+package com.komsi.maleshop.activity;
 
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import android.os.Bundle;
+
+import com.komsi.maleshop.model.Produk;
+import com.komsi.maleshop.R;
+import com.komsi.maleshop.adapter.RecyclerViewAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class WishlistFragment extends Fragment {
-
-    View view;
-
-
+public class activity_arrival extends AppCompatActivity {
     private RecyclerView recyclerView;
 
-    @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_arrival);
+        recyclerView=findViewById(R.id.rv_seeArrival);
 
-        View view = inflater.inflate(R.layout.fragment_wishlist, container, false);
-
-        recyclerView = view.findViewById(R.id.rv_wishlist);
 
         List<Produk> lstArrival = new ArrayList<>();
         lstArrival.add(new Produk("1", "Tolliver-x", R.drawable.bg1, "Rp 400.000", "-", 0.0, "-"));
@@ -38,13 +32,9 @@ public class WishlistFragment extends Fragment {
         lstArrival.add(new Produk("2", "jackNicklaus", R.drawable.bg6, "Rp 325.000", "-", 0.0, "-"));
 
 
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(getActivity(), lstArrival);
-        recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2));
+        RecyclerViewAdapter adapter = new RecyclerViewAdapter(this, lstArrival);
+        recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
         recyclerView.setAdapter(adapter);
-
-
-        return view;
-
 
     }
 }

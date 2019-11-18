@@ -1,4 +1,4 @@
-package com.komsi.maleshop;
+package com.komsi.maleshop.fragment;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,6 +9,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
+
+import com.komsi.maleshop.R;
+import com.komsi.maleshop.model.Slide;
 
 import java.util.List;
 

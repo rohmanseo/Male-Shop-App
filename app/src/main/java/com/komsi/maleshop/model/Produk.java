@@ -1,4 +1,4 @@
-package com.komsi.maleshop;
+package com.komsi.maleshop.model;
 
 public class Produk {
     private String idProduk;

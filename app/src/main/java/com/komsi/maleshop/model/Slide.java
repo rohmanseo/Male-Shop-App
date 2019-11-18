@@ -1,4 +1,4 @@
-package com.komsi.maleshop;
+package com.komsi.maleshop.model;
 
 public class Slide {
     private int image;

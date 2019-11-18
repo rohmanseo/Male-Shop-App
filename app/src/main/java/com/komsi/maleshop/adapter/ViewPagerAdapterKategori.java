@@ -1,4 +1,4 @@
-package com.komsi.maleshop;
+package com.komsi.maleshop.adapter;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;

@@ -1,4 +1,4 @@
-package com.komsi.maleshop;
+package com.komsi.maleshop.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,6 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.komsi.maleshop.R;
+import com.komsi.maleshop.model.Produk;
 
 import java.util.List;
 
