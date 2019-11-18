@@ -9,7 +9,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:background="#F8F4F4">
+
+        android:background="#F8F4F4"
+        >
+
+
+
 
         <androidx.appcompat.widget.SearchView
             android:background="#F8F4F4"
@@ -24,7 +29,11 @@
             android:id="@+id/slider_pager"
             android:layout_width="match_parent"
             android:layout_height="183dp"
-            android:layout_below="@id/sv_cari">
+            android:layout_below="@id/sv_cari"
+
+
+            >
+
 
         </androidx.viewpager.widget.ViewPager>
 
