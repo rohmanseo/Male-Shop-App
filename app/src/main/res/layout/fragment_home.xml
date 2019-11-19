@@ -9,11 +9,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-
         android:background="#F8F4F4">
 
 
         <androidx.appcompat.widget.SearchView
+            android:focusable="false"
             android:id="@+id/sv_cari"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -26,14 +26,9 @@
             android:id="@+id/slider_pager"
             android:layout_width="match_parent"
             android:layout_height="183dp"
-            android:layout_below="@id/sv_cari"
-
-
-            >
-
+            android:layout_below="@id/sv_cari">
 
         </androidx.viewpager.widget.ViewPager>
-
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/indicator"
@@ -42,7 +37,6 @@
             android:layout_marginTop="190dp"
             app:tabBackground="@drawable/indicator_selector"
             app:tabGravity="center">
-
 
         </com.google.android.material.tabs.TabLayout>
 
@@ -55,9 +49,7 @@
             android:layout_marginTop="15dp"
             android:text="New Arrival"
             android:textColor="@android:color/black"
-            android:textSize="20sp"
-
-            />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/text_seeArrival"
@@ -76,7 +68,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_Arrival"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginLeft="12dp"
         android:layout_marginTop="20dp" />
 
