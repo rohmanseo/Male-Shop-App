@@ -47,8 +47,6 @@ public class CategoryFragment extends Fragment {
         tabLayout.setupWithViewPager(viewPager);
         tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
 
-
-
             return view;
     }
 }
