@@ -4,11 +4,12 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.fragment.app.FragmentStatePagerAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ViewPagerAdapterKategori extends FragmentPagerAdapter {
+public class ViewPagerAdapterKategori extends FragmentStatePagerAdapter {
 
     private final List<Fragment> fragmentList = new ArrayList<>();
     private final List<String> fragmentTitleList = new ArrayList<>();

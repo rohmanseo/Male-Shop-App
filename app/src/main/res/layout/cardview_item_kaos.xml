@@ -20,6 +20,12 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <ProgressBar
+                android:id="@+id/progress_circular"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                />
+
         <ImageView
             android:id="@+id/img_cv_item_kaos"
             android:layout_width="160dp"

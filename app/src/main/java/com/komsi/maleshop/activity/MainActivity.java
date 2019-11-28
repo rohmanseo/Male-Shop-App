@@ -20,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
     Toolbar toolbar;
+    Fragment selectedFragment = null;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-                Fragment selectedFragment = null;
 
                 switch (item.getItemId()) {
                     case R.id.navigation_home:
@@ -65,7 +66,6 @@ public class MainActivity extends AppCompatActivity {
                         toolbar.setTitle("Profile");
                         selectedFragment = new ProfileFragment();
                         break;
-
                 }
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,selectedFragment).commit();
                 return true;

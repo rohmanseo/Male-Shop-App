@@ -20,9 +20,8 @@ import java.util.List;
 
 public class KaosKategori extends Fragment {
     View view;
-
-
     private RecyclerView recyclerView;
+    RecyclerViewAdapter adapter;
 
 
     @Nullable
@@ -41,15 +40,10 @@ public class KaosKategori extends Fragment {
         lstArrival.add(new Produk("2","jackNicklaus",R.drawable.bg6,"Rp 325.000","-",0.0,"-","-"));
 
 
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(getActivity(),lstArrival);
+        adapter = new RecyclerViewAdapter(getActivity(),lstArrival);
         recyclerView.setLayoutManager(new GridLayoutManager(getActivity(),2));
+        recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(adapter);
-
-
-
-
-
-
 
     return view;
     }

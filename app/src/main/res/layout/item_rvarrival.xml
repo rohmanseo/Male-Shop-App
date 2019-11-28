@@ -1,50 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="140dp"
     android:layout_height="wrap_content"
     android:clickable="true"
     android:focusable="true"
+    android:orientation="vertical"
 
     >
 
     <ImageView
+        android:id="@+id/imageViewArrival"
         android:layout_width="136dp"
         android:layout_height="162dp"
-        android:id="@+id/imageViewArrival"
         android:scaleType="centerCrop"
-        android:src="@drawable/bg1"
-        />
+        android:src="@drawable/bg1" />
+
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        >
+        android:layout_height="wrap_content">
 
 
-    <TextView
-        android:id="@+id/item_merk_arrival"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="text view nama"
-        android:textSize="15sp"
-        android:textColor="@color/colorPrimary"
+        <TextView
+            android:id="@+id/item_merk_arrival"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="text view nama"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp"
 
-        />
-    <TextView
-        android:layout_below="@id/item_merk_arrival"
-        android:id="@+id/item_harga_arrival"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="text view harga"
-        android:textSize="12sp"
-        android:textColor="@color/colorPrimary"
-        />
+            />
+
+        <TextView
+            android:id="@+id/item_harga_arrival"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_merk_arrival"
+            android:text="text view harga"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp" />
+
         <ImageView
+            android:id="@+id/btn_bookmark"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:src="@drawable/ic_bookmark"
-            />
-</RelativeLayout>
+            android:src="@drawable/ic_bookmark_black_24dp" />
+    </RelativeLayout>
 
 </LinearLayout>
