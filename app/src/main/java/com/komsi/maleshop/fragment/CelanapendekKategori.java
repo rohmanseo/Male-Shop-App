@@ -23,6 +23,8 @@ public class CelanapendekKategori extends Fragment {
 
 
     private RecyclerView recyclerView;
+    List<Produk> lstArrival = new ArrayList<>();
+    RecyclerViewAdapter adapter;
 
 
     @Nullable
@@ -32,7 +34,17 @@ public class CelanapendekKategori extends Fragment {
 
         recyclerView = view.findViewById(R.id.rv_itemKaos);
 
-        List<Produk> lstArrival = new ArrayList<>();
+        addItem();
+        adapter = new RecyclerViewAdapter(getActivity(), lstArrival);
+        recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2));
+        recyclerView.setAdapter(adapter);
+
+
+        return view;
+    }
+
+    void addItem(){
+
         lstArrival.add(new Produk("1", "Tolliver-x", R.drawable.bg1, "Rp 400.000", "-", 0.0, "-","-"));
         lstArrival.add(new Produk("2", "AutivFixin", R.drawable.bg2, "Rp 450.000", "-", 0.0, "-","-"));
         lstArrival.add(new Produk("1", "Banana Republic", R.drawable.bg3, "Rp 300.000", "-", 0.0, "-","-"));
@@ -40,12 +52,17 @@ public class CelanapendekKategori extends Fragment {
         lstArrival.add(new Produk("1", "hmgoeppod", R.drawable.bg5, "Rp 650.000", "-", 0.0, "-","-"));
         lstArrival.add(new Produk("2", "jackNicklaus", R.drawable.bg6, "Rp 325.000", "-", 0.0, "-","-"));
 
+    }
 
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(getActivity(), lstArrival);
-        recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2));
-        recyclerView.setAdapter(adapter);
-
-
-        return view;
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (lstArrival.size()==0){
+            addItem();
+        }else {
+            adapter = new RecyclerViewAdapter(getActivity(), lstArrival);
+            recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2));
+            recyclerView.setAdapter(adapter);
+        }
     }
 }
