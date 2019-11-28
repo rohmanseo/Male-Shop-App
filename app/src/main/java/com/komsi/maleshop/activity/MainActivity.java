@@ -63,7 +63,6 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.navigation_profile:
                         toolbar.setTitle("Profile");
-
                         selectedFragment = new ProfileFragment();
                         break;
 

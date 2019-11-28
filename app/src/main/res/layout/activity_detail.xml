@@ -57,27 +57,90 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tv_harga_produk"
                 android:layout_marginTop="5dp"
-                android:text="COLOUR"
+                android:text="COLOR"
                 android:textColor="@android:color/black"
                 android:textSize="15sp"
                 android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/radio_color"
+                android:orientation="horizontal"
+                android:layout_below="@id/tv_colour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:padding="5dp"
+                    android:button="@drawable/radio_navi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"/>
+                <RadioButton
+                    android:padding="5dp"
+                    android:button="@drawable/radio_grey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"/>
+                <RadioButton
+                    android:padding="5dp"
+                    android:button="@drawable/radio_white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"/>
+
+
+            </RadioGroup>
 
             <TextView
                 android:id="@+id/tv_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/tv_colour"
+                android:layout_below="@id/radio_color"
                 android:layout_marginTop="5dp"
                 android:text="SIZE"
                 android:textColor="@android:color/black"
                 android:textSize="15sp"
                 android:textStyle="bold" />
 
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_size"
+                android:orientation="horizontal"
+                android:id="@+id/radio_size">
+
+                <RadioButton
+                    android:padding="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/xs_selected"/>
+
+
+                <RadioButton
+                    android:padding="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/s_notselected"/>
+
+
+                <RadioButton
+                    android:padding="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/m_notselected"/>
+
+
+                <RadioButton
+                    android:padding="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/l_notselected"/>
+
+
+            </RadioGroup>
+
             <Button
                 android:id="@+id/btn_add_to_cart"
                 android:layout_width="247dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/tv_size"
+                android:layout_below="@id/radio_size"
                 android:layout_marginBottom="20dp"
                 android:background="@color/colorAccent"
                 android:text="Add To Cart"
@@ -88,7 +151,7 @@
                 android:id="@+id/img_favourite"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/tv_size"
+                android:layout_below="@id/radio_size"
                 android:layout_toRightOf="@id/btn_add_to_cart"
                 android:src="@drawable/love" />
         </RelativeLayout>

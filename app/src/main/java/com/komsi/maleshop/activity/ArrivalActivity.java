@@ -3,9 +3,8 @@ package com.komsi.maleshop.activity;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.os.Bundle;
-
+import androidx.appcompat.widget.Toolbar;
 import com.komsi.maleshop.model.Produk;
 import com.komsi.maleshop.R;
 import com.komsi.maleshop.adapter.RecyclerViewAdapter;
@@ -13,14 +12,19 @@ import com.komsi.maleshop.adapter.RecyclerViewAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class activity_arrival extends AppCompatActivity {
+public class ArrivalActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_arrival);
         recyclerView=findViewById(R.id.rv_seeArrival);
+
+        toolbar = findViewById(R.id.toolbar);
+        toolbar.setTitle("New Arrival");
+        setSupportActionBar(toolbar);
 
 
         List<Produk> lstArrival = new ArrayList<>();

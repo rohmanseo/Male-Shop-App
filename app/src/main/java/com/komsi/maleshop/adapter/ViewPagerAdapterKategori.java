@@ -21,9 +21,6 @@ public class ViewPagerAdapterKategori extends FragmentPagerAdapter {
     @NonNull
     @Override
     public Fragment getItem(int position) {
-
-
-
         return fragmentList.get(position);
     }
 

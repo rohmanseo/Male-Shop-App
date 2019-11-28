@@ -21,7 +21,7 @@ import com.komsi.maleshop.model.Produk;
 import com.komsi.maleshop.R;
 import com.komsi.maleshop.adapter.RvArrivalAdapter;
 import com.komsi.maleshop.model.Slide;
-import com.komsi.maleshop.activity.activity_arrival;
+import com.komsi.maleshop.activity.ArrivalActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -56,7 +56,7 @@ public class HomeFragment extends Fragment {
         seeAll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(HomeFragment.this.getActivity(), activity_arrival.class));
+                startActivity(new Intent(HomeFragment.this.getActivity(), ArrivalActivity.class));
             }
         });
 

@@ -24,8 +24,6 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin= findViewById(R.id.btn_login);
 
 
-
-
         tvDaftar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -36,6 +34,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(LoginActivity.this,MainActivity.class));
+                finish();
             }
         });
 
