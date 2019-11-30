@@ -3,19 +3,29 @@ package com.komsi.maleshop.activity;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebView;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RatingBar;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.bumptech.glide.Glide;
 import com.google.android.material.snackbar.Snackbar;
 import com.komsi.maleshop.R;
+import com.komsi.maleshop.fragment.DialogReview;
 
 public class DetailActivity extends AppCompatActivity {
 
     ImageView imgProduk;
     WebView web;
     ImageView imgFavourite;
+    RatingBar ratingBar;
+    Button btnAddToCart;
 
     Boolean favorited = true;
 
@@ -27,6 +37,37 @@ public class DetailActivity extends AppCompatActivity {
         imgProduk = findViewById(R.id.img_produk);
         web = findViewById(R.id.wv_detail);
         imgFavourite = findViewById(R.id.img_favourite);
+        ratingBar = findViewById(R.id.rating_bar);
+        btnAddToCart = findViewById(R.id.btn_add_to_cart);
+
+        btnAddToCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (btnAddToCart.getText().toString().equals("Add To Cart")){
+                    btnAddToCart.setText("Remove To Cart");
+                    Snackbar.make(view, "Ditambahkan ke Keranjang",Snackbar.LENGTH_SHORT).show();
+                }else {
+                    btnAddToCart.setText("Add To Cart");
+                    Snackbar.make(view, "Dihapus dari Keranjang",Snackbar.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+            @Override
+            public void onRatingChanged(RatingBar ratingBar, float v, boolean b) {
+                FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+
+                Fragment fragment = getSupportFragmentManager().findFragmentByTag("dialog review");
+                if (fragment != null){
+                    fragmentTransaction.remove(fragment);
+                }
+                fragmentTransaction.addToBackStack(null);
+
+                DialogFragment dialogReview = new DialogReview();
+                dialogReview.show(fragmentTransaction,DialogReview.class.getSimpleName());
+            }
+        });
 
         imgFavourite.setOnClickListener(new View.OnClickListener() {
             @Override

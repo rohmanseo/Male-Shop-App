@@ -33,6 +33,7 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                btnLogin.setBackgroundColor(R.color.colorSecond);
                 startActivity(new Intent(LoginActivity.this,MainActivity.class));
                 finish();
             }

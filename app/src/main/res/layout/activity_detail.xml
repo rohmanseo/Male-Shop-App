@@ -64,26 +64,28 @@
 
             <RadioGroup
                 android:id="@+id/radio_color"
-                android:orientation="horizontal"
-                android:layout_below="@id/tv_colour"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_colour"
+                android:orientation="horizontal">
 
                 <RadioButton
-                    android:padding="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
                     android:button="@drawable/radio_navi"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"/>
+                    android:padding="5dp" />
+
                 <RadioButton
-                    android:padding="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
                     android:button="@drawable/radio_grey"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"/>
+                    android:padding="5dp" />
+
                 <RadioButton
-                    android:padding="5dp"
-                    android:button="@drawable/radio_white"
                     android:layout_width="wrap_content"
-                    android:layout_height="40dp"/>
+                    android:layout_height="40dp"
+                    android:button="@drawable/radio_white"
+                    android:padding="5dp" />
 
 
             </RadioGroup>
@@ -100,38 +102,38 @@
                 android:textStyle="bold" />
 
             <RadioGroup
+                android:id="@+id/radio_size"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tv_size"
-                android:orientation="horizontal"
-                android:id="@+id/radio_size">
+                android:orientation="horizontal">
 
                 <RadioButton
-                    android:padding="5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:button="@drawable/xs_selected"/>
-
-
-                <RadioButton
-                    android:padding="5dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:button="@drawable/s_notselected"/>
+                    android:button="@drawable/xs_selected"
+                    android:padding="5dp" />
 
 
                 <RadioButton
-                    android:padding="5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:button="@drawable/m_notselected"/>
+                    android:button="@drawable/s_notselected"
+                    android:padding="5dp" />
 
 
                 <RadioButton
-                    android:padding="5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:button="@drawable/l_notselected"/>
+                    android:button="@drawable/m_notselected"
+                    android:padding="5dp" />
+
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/l_notselected"
+                    android:padding="5dp" />
 
 
             </RadioGroup>
@@ -164,10 +166,10 @@
             android:background="#F0F0F0" />
 
         <LinearLayout
+            android:id="@+id/detail"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@id/view"
-            android:id="@+id/detail"
             android:background="@android:color/white"
             android:orientation="vertical"
             android:padding="16dp">
@@ -188,26 +190,170 @@
 
         </LinearLayout>
 
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@id/detail"
+            android:background="#F0F0F0" />
+
         <LinearLayout
+            android:id="@+id/rating"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_below="@id/detail">
+            android:layout_below="@id/view2"
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="Beri rating"
                 android:textColor="@color/colorPrimary"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                android:padding="16dp"
-                android:text="Beri rating"/>
+                android:textStyle="bold" />
 
             <RatingBar
+                android:id="@+id/rating_bar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="16dp" />
 
-                />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@id/rating"
+            android:background="#F0F0F0" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view3"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="Review"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_review2"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/img_profile" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/img_review2"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Rizal"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RatingBar
+
+
+                            style="?attr/ratingBarStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:transformPivotX="0dp"
+                            android:transformPivotY="0dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="29 November 2019"
+                            android:textStyle="italic" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Bagus banget ini sumpah"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_review"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/img_profile" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/img_review"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Rohman"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RatingBar
+                            style="?attr/ratingBarStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:transformPivotX="0dp"
+                            android:transformPivotY="0dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="29 November 2019"
+                            android:textStyle="italic" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Gak rugi dong beli ini"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
 
         </LinearLayout>
 

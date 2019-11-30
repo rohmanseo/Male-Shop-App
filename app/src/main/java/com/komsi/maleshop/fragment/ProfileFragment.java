@@ -20,10 +20,10 @@ import com.komsi.maleshop.activity.LoginActivity;
 public class ProfileFragment extends Fragment {
     View view;
     Button btnLogout;
-    ImageView btnEdtName;
+    Button btnEdtName;
     TextView tvName;
     EditText edtName;
-    ImageView btnEdtSuccess;
+    Button btnEdtSuccess;
 
     @Nullable
     @Override

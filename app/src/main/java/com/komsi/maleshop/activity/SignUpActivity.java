@@ -22,6 +22,7 @@ public class SignUpActivity extends AppCompatActivity {
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                btnSignUp.setBackgroundColor(R.color.colorSecond);
                 startActivity(new Intent(SignUpActivity.this,MainActivity.class));
                 finish();
             }

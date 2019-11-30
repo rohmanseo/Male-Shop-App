@@ -79,17 +79,19 @@
                     android:background="@drawable/edit_text_border"
                     android:padding="5dp"
                     android:text="Rizal M" />
-                <ImageView
+                <Button
+                    android:padding="15dp"
                     android:id="@+id/btn_edit_name"
                     android:layout_width="15dp"
                     android:layout_height="15dp"
-                    android:src="@drawable/btn_edit"/>
-                <ImageView
+                    android:background="@drawable/btn_edit"/>
+                <Button
+                    android:padding="15dp"
                     android:id="@+id/btn_edit_name_success"
                     android:visibility="gone"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:src="@drawable/ic_done_black_24dp"/>
+                    android:background="@drawable/ic_done_black_24dp"/>
 
             </LinearLayout>
 
