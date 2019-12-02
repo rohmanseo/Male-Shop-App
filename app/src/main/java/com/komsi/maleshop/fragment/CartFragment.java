@@ -1,9 +1,11 @@
 package com.komsi.maleshop.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -12,6 +14,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.komsi.maleshop.activity.RincianActivity;
 import com.komsi.maleshop.adapter.CartAdapter;
 import com.komsi.maleshop.model.Produk;
 import com.komsi.maleshop.R;
@@ -24,6 +27,7 @@ public class CartFragment extends Fragment {
     CartAdapter adapter;
     ArrayList<Produk> list;
     TextView hargaProduk;
+    Button btnCheckout;
 
     @Nullable
     @Override
@@ -32,6 +36,14 @@ public class CartFragment extends Fragment {
 
         recyclerView = view.findViewById(R.id.rv_cart);
         hargaProduk = view.findViewById(R.id.tv_total);
+        btnCheckout = view.findViewById(R.id.btn_checkout);
+
+        btnCheckout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getContext(), RincianActivity.class));
+            }
+        });
 
         recyclerView.setHasFixedSize(true);
         list = new ArrayList<>();

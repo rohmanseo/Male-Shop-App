@@ -78,10 +78,8 @@ public class DetailActivity extends AppCompatActivity {
                     favorited = true;
                 }
                 if (favorited) {
-                    Glide.with(DetailActivity.this).load(R.drawable.ic_bookmark_black_50dp).into(imgFavourite);
                     Snackbar.make(view, "Berhasil ditambahkan ke favorite", Snackbar.LENGTH_SHORT).show();
                 } else {
-                    Glide.with(DetailActivity.this).load(R.drawable.ic_bookmark_white_50dp).into(imgFavourite);
                     Snackbar.make(view, "Dihapus dari favorite", Snackbar.LENGTH_SHORT).show();
                 }
 
