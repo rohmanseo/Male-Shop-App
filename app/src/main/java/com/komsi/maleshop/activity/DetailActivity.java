@@ -1,11 +1,13 @@
 package com.komsi.maleshop.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RatingBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,6 +28,10 @@ public class DetailActivity extends AppCompatActivity {
     ImageView imgFavourite;
     RatingBar ratingBar;
     Button btnAddToCart;
+    Intent intent;
+    TextView tvHargaProduk;
+    TextView tvNamaProduk;
+    Integer gambar;
 
     Boolean favorited = true;
 
@@ -33,22 +39,37 @@ public class DetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
+        intent = getIntent();
 
         imgProduk = findViewById(R.id.img_produk);
         web = findViewById(R.id.wv_detail);
         imgFavourite = findViewById(R.id.img_favourite);
         ratingBar = findViewById(R.id.rating_bar);
         btnAddToCart = findViewById(R.id.btn_add_to_cart);
+        tvHargaProduk = findViewById(R.id.tv_harga_produk);
+        tvNamaProduk = findViewById(R.id.tv_nama_produk);
+
+        final String nama = intent.getStringExtra("nama");
+        String harga = intent.getStringExtra("harga");
+        gambar = intent.getIntExtra("gambar",R.drawable.produk);
+
+        tvHargaProduk.setText(harga);
+        tvNamaProduk.setText(nama);
+
+        btnAddToCart.setText("Tambahkan Ke Keranjang");
+
 
         btnAddToCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (btnAddToCart.getText().toString().equals("Add To Cart")){
-                    btnAddToCart.setText("Remove To Cart");
+                if (btnAddToCart.getText().toString().equals("Tambahkan Ke Keranjang")){
                     Snackbar.make(view, "Ditambahkan ke Keranjang",Snackbar.LENGTH_SHORT).show();
+                    btnAddToCart.setText("Lihat Keranjang");
                 }else {
-                    btnAddToCart.setText("Add To Cart");
-                    Snackbar.make(view, "Dihapus dari Keranjang",Snackbar.LENGTH_SHORT).show();
+                    Intent intent = new Intent(DetailActivity.this,MainActivity.class);
+                    intent.putExtra("cart",1);
+                    startActivity(intent);
+                    finish();
                 }
             }
         });
@@ -87,7 +108,7 @@ public class DetailActivity extends AppCompatActivity {
         });
 
 
-        Glide.with(this).load(R.drawable.produk).into(imgProduk);
+        Glide.with(this).load(gambar).into(imgProduk);
 
         web.loadData("<body style='margin: 0; padding: 0'><p><strong>PRODUCT DETAILS</strong><br />Shirt by Burton Menswear London</p>\n" +
                 "<p>For that thing you RSVPd to<br />Button-down collar<br />Button placket<br />Chest pocket<br />Curved hem<br />Regular fit<br />Just select your usual size<br />PRODUCT CODE<br />1487276</p>\n" +

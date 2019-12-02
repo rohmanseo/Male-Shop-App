@@ -45,7 +45,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
 
         Glide.with(context).load(list.get(position).getThumbnail()).into(holder.imgCart);
         holder.cartTitle.setText(list.get(position).getNama());
-        holder.cartColor.setText(list.get(position).getColour());
+        holder.cartColor.setText("Blue");
         holder.cartPrize.setText(list.get(position).getHarga());
         hargaProduk.setText("Rp " + getHargaTotal());
         holder.imgRemove.setOnClickListener(new View.OnClickListener() {

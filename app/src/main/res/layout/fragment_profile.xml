@@ -15,12 +15,21 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="50dp"
             android:src="@drawable/img_profile" />
+        <TextView
+            android:id="@+id/tv_edt_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_profile"
+            android:layout_centerHorizontal="true"
+            android:text="Edit Foto"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tv_profile_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/img_profile"
+            android:layout_below="@id/tv_edt_profile"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30dp"
             android:text="Rizal M"
@@ -67,7 +76,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
-                    android:padding="5dp"
+                    android:padding="10dp"
                     android:text="Rizal M" />
 
                 <EditText

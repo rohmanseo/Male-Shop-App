@@ -78,7 +78,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginRight="10dp"
-                android:src="@drawable/ic_perm_contact_calendar_black_24dp" />
+                android:src="@drawable/document" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -101,7 +101,7 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginRight="10dp"
-                android:src="@color/colorPrimary" />
+                android:src="@drawable/bg1" />
 
             <Button
                 android:padding="20dp"
@@ -118,7 +118,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/img_cart"
-                android:text="Judul"
+                android:text="Tolliver-x"
                 android:textColor="@color/colorPrimary"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -159,7 +159,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="SIze : "
+                    android:text="Size : "
                     android:textSize="15sp"
                     android:textStyle="bold" />
 
@@ -178,7 +178,7 @@
                 android:layout_toRightOf="@id/img_cart"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Rp 100000"
+                android:text="Rp 400.000"
                 android:id="@+id/tv_harga_cart"/>
         </RelativeLayout>
 
@@ -194,7 +194,7 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginRight="10dp"
-                android:src="@color/colorPrimary" />
+                android:src="@drawable/bg3" />
 
             <Button
                 android:padding="20dp"
@@ -211,7 +211,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/img_cart2"
-                android:text="Judul"
+                android:text="AutivFixin"
                 android:textColor="@color/colorPrimary"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -252,7 +252,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="SIze : "
+                    android:text="Size : "
                     android:textSize="15sp"
                     android:textStyle="bold" />
 
@@ -271,7 +271,7 @@
                 android:layout_toRightOf="@id/img_cart2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Rp 100000"
+                android:text="Rp 450.000"
                 android:id="@+id/tv_harga_cart2"/>
         </RelativeLayout>
 
@@ -286,7 +286,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginRight="10dp"
-                android:src="@drawable/ic_perm_contact_calendar_black_24dp" />
+                android:src="@drawable/delivery_truck" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -321,10 +321,10 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:layout_marginRight="10dp"
-                android:src="@drawable/ic_perm_contact_calendar_black_24dp" />
+                android:src="@drawable/information" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -350,7 +350,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:text="100.000" />
+                android:text="850.000" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -399,7 +399,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Total : Rp200.000 "
+            android:text="Total : Rp 850.000 "
             android:textColor="@color/colorPrimary"
             android:textSize="20sp"
             android:textStyle="bold" />

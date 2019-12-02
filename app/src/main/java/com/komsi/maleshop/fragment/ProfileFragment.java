@@ -35,7 +35,6 @@ public class ProfileFragment extends Fragment {
         edtName = view.findViewById(R.id.edt_name);
         btnEdtSuccess = view.findViewById(R.id.btn_edit_name_success);
 
-
         btnEdtName.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -43,6 +42,7 @@ public class ProfileFragment extends Fragment {
                 edtName.setVisibility(View.VISIBLE);
                 btnEdtName.setVisibility(View.GONE);
                 btnEdtSuccess.setVisibility(View.VISIBLE);
+                edtName.setFocusable(true);
             }
         });
         btnEdtSuccess.setOnClickListener(new View.OnClickListener() {

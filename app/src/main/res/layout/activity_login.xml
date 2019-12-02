@@ -16,8 +16,6 @@
         android:src="@drawable/logo" />
 
     <EditText
-        android:focusable="false"
-
         android:id="@+id/edt_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -30,8 +28,6 @@
         android:padding="15dp" />
 
     <EditText
-        android:focusable="false"
-
         android:id="@+id/edt_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -40,7 +36,7 @@
         android:background="@drawable/edit_text_border"
         android:ems="10"
         android:hint="Password"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         android:padding="15dp" />
 
     <TextView

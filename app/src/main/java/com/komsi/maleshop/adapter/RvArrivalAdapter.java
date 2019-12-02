@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.google.android.material.snackbar.Snackbar;
 import com.komsi.maleshop.R;
 import com.komsi.maleshop.activity.DetailActivity;
 import com.komsi.maleshop.model.Produk;
@@ -38,14 +39,23 @@ public class RvArrivalAdapter extends RecyclerView.Adapter<RvArrivalAdapter.MyVi
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, int i) {
+    public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, final int i) {
         myViewHolder.merk.setText(mData.get(i).getNama());
         myViewHolder.harga.setText(mData.get(i).getHarga());
         Glide.with(context).load(mData.get(i).getThumbnail()).into(myViewHolder.imgArrival);
         myViewHolder.imgArrival.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                context.startActivity(new Intent(context, DetailActivity.class));
+                Intent intent = new Intent(context, DetailActivity.class);
+                intent.putExtra("nama", mData.get(i).getNama());
+                intent.putExtra("harga", mData.get(i).getHarga());
+                context.startActivity(intent);
+            }
+        });
+        myViewHolder.btn_bookmark.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view,"Dihapus dari favorite",Snackbar.LENGTH_SHORT).show();
             }
         });
 
@@ -61,12 +71,14 @@ public class RvArrivalAdapter extends RecyclerView.Adapter<RvArrivalAdapter.MyVi
         private TextView merk;
         private TextView harga;
         private ImageView imgArrival;
+        ImageView btn_bookmark;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             merk= itemView.findViewById(R.id.item_merk_arrival);
             harga=itemView.findViewById(R.id.item_harga_arrival);
             imgArrival=itemView.findViewById(R.id.imageViewArrival);
+            btn_bookmark = itemView.findViewById(R.id.btn_bookmark);
         }
     }
 }
