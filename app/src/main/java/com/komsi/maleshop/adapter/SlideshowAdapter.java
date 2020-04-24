@@ -1,4 +1,4 @@
-package com.komsi.maleshop.fragment;
+package com.komsi.maleshop.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,17 +10,18 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
+import com.bumptech.glide.Glide;
 import com.komsi.maleshop.R;
 import com.komsi.maleshop.model.Slide;
 
 import java.util.List;
 
-public class SliderPagerAdapter extends PagerAdapter {
+public class SlideshowAdapter extends PagerAdapter {
    private Context mcontext;
-   List<Slide> mList;
+   public List<Slide> mList;
 
 
-    public SliderPagerAdapter(Context mcontext, List<Slide> mList) {
+    public SlideshowAdapter(Context mcontext, List<Slide> mList) {
         this.mcontext = mcontext;
         this.mList = mList;
     }
@@ -38,7 +39,7 @@ public class SliderPagerAdapter extends PagerAdapter {
 
         ImageView slideImg = slideLayout.findViewById(R.id.slide_img);
         TextView slideText = slideLayout.findViewById(R.id.slide_title);
-        slideImg.setImageResource(mList.get(position).getImage());
+        Glide.with(mcontext).load(mList.get(position).getImage()).into(slideImg);
         slideText.setText(mList.get(position).getTitle());
 
         container.addView(slideLayout);

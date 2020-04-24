@@ -46,7 +46,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder(@NonNull final MyViewHolder holder, int position) {
         holder.tv_kaos_merk.setText(mData.get(position).getNama());
-        Glide.with(mContext).load(mData.get(position).getThumbnail())
+        Glide.with(mContext).load(mData.get(position).getFoto())
                 .listener(new RequestListener<Drawable>() {
                     @Override
                     public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
@@ -61,7 +61,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                     }
                 })
                 .into(holder.img_kaos);
-        holder.tv_kaos_harga.setText(mData.get(position).getHarga());
+        holder.tv_kaos_harga.setText("");
     }
 
     @Override

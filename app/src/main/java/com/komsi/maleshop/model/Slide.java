@@ -1,19 +1,19 @@
 package com.komsi.maleshop.model;
 
 public class Slide {
-    private int image;
+    private String image;
     private String Title;
 
-    public Slide(int image, String title) {
+    public Slide(String image, String title) {
         this.image = image;
         Title = title;
     }
 
-    public int getImage() {
+    public String getImage() {
         return image;
     }
 
-    public void setImage(int image) {
+    public void setImage(String image) {
         this.image = image;
     }
 
