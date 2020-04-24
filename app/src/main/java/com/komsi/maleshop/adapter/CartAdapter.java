@@ -42,10 +42,10 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
 
-        Glide.with(context).load(list.get(position).getThumbnail()).into(holder.imgCart);
+        Glide.with(context).load(list.get(position).getFoto()).into(holder.imgCart);
         holder.cartTitle.setText(list.get(position).getNama());
-        holder.cartColor.setText(list.get(position).getColour());
-        holder.cartPrize.setText(list.get(position).getHarga());
+        holder.cartColor.setText("");
+        holder.cartPrize.setText("");
         hargaProduk.setText("Rp " + getHargaTotal());
         holder.imgRemove.setOnClickListener(new View.OnClickListener() {
 
@@ -89,7 +89,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
     public Double getHargaTotal(){
         hargaTotal = 0.0;
         for (int i=0;i<list.size();i++){
-            hargaTotal += Double.parseDouble(list.get(i).getHarga());
+            hargaTotal += Double.parseDouble("");
         }
         return hargaTotal;
 

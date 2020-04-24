@@ -32,29 +32,14 @@
         android:background="@drawable/edit_text_border"
         android:ems="10"
         android:hint="Password"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         android:padding="15dp" />
-
-    <CheckBox
-        android:id="@+id/cek_remember"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/edt_password"
-        android:text="Remember me" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/edt_password"
-        android:layout_alignParentRight="true"
-        android:text="Forgot Password?"
-        android:textColor="@color/colorPrimary" />
 
     <Button
         android:id="@+id/btn_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/cek_remember"
+        android:layout_below="@id/edt_password"
         android:layout_marginTop="20dp"
         android:background="@color/colorPrimary"
         android:text="Login"

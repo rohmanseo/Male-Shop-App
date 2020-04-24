@@ -1,5 +1,6 @@
 package com.komsi.maleshop.activity
 
+import android.app.ProgressDialog
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -11,9 +12,14 @@ import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
+import com.androidnetworking.AndroidNetworking
+import com.androidnetworking.common.Priority
+import com.androidnetworking.error.ANError
+import com.androidnetworking.interfaces.JSONObjectRequestListener
 import com.komsi.maleshop.R
 import com.komsi.maleshop.constant.ConstApi
 import com.komsi.maleshop.constant.Credential
+import com.komsi.maleshop.fragment.DialogFragmentLoading
 import kotlinx.android.synthetic.main.activity_sign_up.*
 import org.json.JSONObject
 
@@ -38,36 +44,36 @@ class SignUpActivity : AppCompatActivity() {
         }
     }
 
-    fun register(nama: String,email:String,password:String) {
-        val params = JSONObject()
-        params.put("nama",nama)
-        params.put("no_telp","9786")
-        params.put("alamat","default")
-        params.put("foto","default")
-        params.put("email",email)
-        params.put("password",password)
+    private fun register(nama: String, email:String, password:String) {
+        AndroidNetworking.initialize(this)
+        val dialog = DialogFragmentLoading()
+        dialog.show(supportFragmentManager,"Dialog Loading")
+        AndroidNetworking.post(ConstApi.REGISTER.value)
+                .addBodyParameter("nama",nama)
+                .addBodyParameter("no_telp","9786")
+                .addBodyParameter("alamat","default")
+                .addBodyParameter("foto","default")
+                .addBodyParameter("email",email)
+                .addBodyParameter("password",password)
+                .setTag("Signup")
+                .setPriority(Priority.HIGH)
+                .build()
+                .getAsJSONObject(object : JSONObjectRequestListener {
+                    override fun onResponse(response: JSONObject) {
+                        Log.d("Signupresponse", response.toString())
+                        val token = response.getString("access_token").toString()
+                        Credential.setToken(this@SignUpActivity,token)
+                        startActivity(Intent(this@SignUpActivity,MainActivity::class.java))
+                        dialog.dismiss()
+                        finish()
+                    }
 
-        val jsonObjectRequest = object : JsonObjectRequest(Request.Method.POST,
-                ConstApi.REGISTER.value,
-                params,
-                Response.Listener { response ->
-                    Log.d("LoginResponse",response.toString())
-                    Credential.setToken(this@SignUpActivity,response.getString("access_token").toString())
-                    startActivity(Intent(this@SignUpActivity,MainActivity::class.java))
-                }, Response.ErrorListener { error ->
-            Log.d("LoginResponse",error.toString())
-
-
-        }
-        ){
-            @Throws(AuthFailureError::class)
-            override fun getHeaders(): MutableMap<String, String> {
-                return super.getHeaders()
-            }
-        }
-
-        val requestQueue = Volley.newRequestQueue(this)
-        requestQueue.add(jsonObjectRequest)
+                    override fun onError(anError: ANError?) {
+                        Toast.makeText(this@SignUpActivity,"Error ${anError.toString()}",Toast.LENGTH_SHORT).show()
+                        Log.d("Signupresponse", anError.toString())
+                        dialog.dismiss()
+                    }
+                })
     }
 
 }

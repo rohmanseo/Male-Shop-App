@@ -35,9 +35,9 @@ public class CartFragment extends Fragment {
 
         recyclerView.setHasFixedSize(true);
         list = new ArrayList<>();
-        list.add(new Produk("1", "Tolliver-x", R.drawable.bg1, "400000", "-", 0.0, "-","-"));
-        list.add(new Produk("2", "AutivFixin", R.drawable.bg2, "450000", "-", 0.0, "-","-"));
-        list.add(new Produk("1", "Banana Republic", R.drawable.bg3, "300000", "-", 0.0, "-","-"));
+//        list.add(new Produk("1", "Tolliver-x", R.drawable.bg1, "400000", "-", 0.0, "-","-"));
+//        list.add(new Produk("2", "AutivFixin", R.drawable.bg2, "450000", "-", 0.0, "-","-"));
+//        list.add(new Produk("1", "Banana Republic", R.drawable.bg3, "300000", "-", 0.0, "-","-"));
 
         adapter = new CartAdapter(getActivity(), list,hargaProduk);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));

@@ -37,30 +37,23 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-
-
                 switch (item.getItemId()) {
                     case R.id.navigation_home:
                         toolbar.setTitle("Male Shop");
-
                         selectedFragment = new HomeFragment();
                         break;
                     case R.id.navigation_category:
                         toolbar.setTitle("Kategori");
-
                         selectedFragment = new CategoryFragment();
-
                         break;
                     case R.id.navigation_cart:
                         toolbar.setTitle("Cart");
-
                         selectedFragment = new CartFragment();
 
                         break;
                     case R.id.navigation_wishlist:
                         toolbar.setTitle("Disimpan");
                         selectedFragment = new WishlistFragment();
-
                         break;
                     case R.id.navigation_profile:
                         toolbar.setTitle("Profile");

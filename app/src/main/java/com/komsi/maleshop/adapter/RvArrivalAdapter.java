@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.komsi.maleshop.R;
 import com.komsi.maleshop.activity.DetailActivity;
+import com.komsi.maleshop.constant.ConstApi;
 import com.komsi.maleshop.model.Produk;
 
 import java.util.List;
@@ -38,14 +39,16 @@ public class RvArrivalAdapter extends RecyclerView.Adapter<RvArrivalAdapter.MyVi
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, int i) {
+    public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, final int i) {
         myViewHolder.merk.setText(mData.get(i).getNama());
-        myViewHolder.harga.setText(mData.get(i).getHarga());
-        Glide.with(context).load(mData.get(i).getThumbnail()).into(myViewHolder.imgArrival);
+        myViewHolder.harga.setText(String.valueOf(mData.get(i).getHarga()));
+        Glide.with(context).load(ConstApi.PRODUCT_IMAGE_URL.getValue() + mData.get(i).getFoto()).into(myViewHolder.imgArrival);
         myViewHolder.imgArrival.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                context.startActivity(new Intent(context, DetailActivity.class));
+                Intent intent = new Intent(context, DetailActivity.class);
+                intent.putExtra("produk",mData.get(i));
+                context.startActivity(intent);
             }
         });
 

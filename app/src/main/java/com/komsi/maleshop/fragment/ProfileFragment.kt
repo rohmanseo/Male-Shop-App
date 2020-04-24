@@ -5,10 +5,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.komsi.maleshop.R
 import com.komsi.maleshop.activity.LoginActivity
@@ -18,8 +14,7 @@ import kotlinx.android.synthetic.main.fragment_profile.*
 class ProfileFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.fragment_profile, container, false)
-//        btnLogout = view.findViewById(R.id.btn_logout)
+        //        btnLogout = view.findViewById(R.id.btn_logout)
 //        btnEdtName = view.findViewById(R.id.btn_edit_name)
 //        tvName = view.findViewById(R.id.tv_name)
 //        edtName = view.findViewById(R.id.edt_name)
@@ -36,7 +31,7 @@ class ProfileFragment : Fragment() {
 //            btnEdtSuccess.setVisibility(View.GONE)
 //            edtName.setVisibility(View.GONE)
 //        })
-        return view
+        return inflater.inflate(R.layout.fragment_profile, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -45,6 +40,7 @@ class ProfileFragment : Fragment() {
 
             Credential.deleteToken(requireContext())
             startActivity(Intent(view.context, LoginActivity::class.java))
+            requireActivity().finish()
         }
     }
 }

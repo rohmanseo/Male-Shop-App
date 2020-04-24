@@ -4,16 +4,28 @@
     android:layout_height="wrap_content"
     android:clickable="true"
     android:focusable="true"
-    android:orientation="vertical"
+    android:orientation="vertical">
 
-    >
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/imageViewArrival"
-        android:layout_width="136dp"
-        android:layout_height="162dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/bg1" />
+        <ImageView
+            android:id="@+id/imageViewArrival"
+            android:layout_width="136dp"
+            android:layout_height="162dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg1" />
+
+        <ImageView
+            android:id="@+id/btn_bookmark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="5dp"
+            android:src="@drawable/ic_favorite_black_24dp" />
+    </FrameLayout>
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -39,12 +51,7 @@
             android:textColor="@color/colorPrimary"
             android:textSize="12sp" />
 
-        <ImageView
-            android:id="@+id/btn_bookmark"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:src="@drawable/ic_bookmark_black_24dp" />
+
     </RelativeLayout>
 
 </LinearLayout>
