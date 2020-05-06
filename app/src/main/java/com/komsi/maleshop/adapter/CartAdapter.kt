@@ -16,7 +16,7 @@ import com.androidnetworking.interfaces.StringRequestListener
 import com.bumptech.glide.Glide
 import com.komsi.maleshop.R
 import com.komsi.maleshop.model.Cart
-import com.komsi.maleshop.repository.local.Credential
+import com.komsi.maleshop.persistence.Credential
 import com.komsi.maleshop.utils.ConstApi
 import java.util.*
 

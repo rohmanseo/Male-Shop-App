@@ -1,14 +1,12 @@
 package com.komsi.maleshop.adapter
 
 import android.content.Context
+import android.graphics.drawable.Drawable
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageButton
-import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.androidnetworking.AndroidNetworking
@@ -16,9 +14,13 @@ import com.androidnetworking.common.Priority
 import com.androidnetworking.error.ANError
 import com.androidnetworking.interfaces.StringRequestListener
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.DataSource
+import com.bumptech.glide.load.engine.GlideException
+import com.bumptech.glide.request.RequestListener
+import com.bumptech.glide.request.target.Target
 import com.komsi.maleshop.R
 import com.komsi.maleshop.model.Produk
-import com.komsi.maleshop.repository.local.Credential
+import com.komsi.maleshop.persistence.Credential
 import com.komsi.maleshop.utils.ConstApi
 import java.util.*
 
@@ -43,7 +45,8 @@ class ProductAdapter(var context: Context, val callback: ProductCallback) : Recy
     override fun onBindViewHolder(myViewHolder: MyViewHolder, position: Int) {
         myViewHolder.merk.text = list[position].nama
         myViewHolder.harga.text = list[position].harga.toString()
-        Glide.with(context).load(ConstApi.PRODUCT_IMAGE_URL.value + list[position].foto).into(myViewHolder.imgArrival)
+        Glide.with(context).load(ConstApi.PRODUCT_IMAGE_URL.value + list[position].foto)
+                .into(myViewHolder.imgArrival)
         myViewHolder.itemView.setOnClickListener {
             callback.productOnClick(list[position])
             Log.d("adapterr", "itemview clicked")

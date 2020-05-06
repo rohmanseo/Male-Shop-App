@@ -31,7 +31,7 @@ class ArrivalFragment : Fragment(), ProductCallback {
     }
 
     private fun fetchSearch() {
-        rvProduct.layoutManager = GridLayoutManager(requireContext(), 3)
+        rvProduct.layoutManager = GridLayoutManager(requireContext(), 2)
         adapter = ProductAdapter(requireContext(), this)
         rvProduct.adapter = adapter
 

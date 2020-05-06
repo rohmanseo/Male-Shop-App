@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">Male Shop</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Home</string>
+    <string name="setting">Setting</string>
+    <string name="daily_reminder">Daily reminder</string>
+    <string name="notify_me_every_9_am_to_check_the_new_products">Notify me every 9 AM to check the new products</string>
+    <string name="language">Language</string>
+    <string name="english">English</string>
 </resources>

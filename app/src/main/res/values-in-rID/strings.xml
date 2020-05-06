@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Male Shop</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Beranda</string>
+    <string name="setting">Pengaturan</string>
+    <string name="daily_reminder">Pengingat Harian</string>
+    <string name="notify_me_every_9_am_to_check_the_new_products">Ingatkan saya untuk kembali ke aplikasi</string>
+    <string name="language">Bahasa</string>
+    <string name="english">Indonesia</string>
+</resources>

@@ -12,7 +12,9 @@ import androidx.fragment.app.Fragment;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.bottomnavigation.LabelVisibilityMode;
+import com.komsi.maleshop.helper.NotificationHelper;
 import com.komsi.maleshop.helper.ToolbarHelper;
+import com.komsi.maleshop.persistence.Prefs;
 import com.komsi.maleshop.ui.fragment.CartFragment;
 import com.komsi.maleshop.ui.fragment.CategoryFragment;
 import com.komsi.maleshop.ui.fragment.HomeFragment;
@@ -48,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();
         ToolbarHelper.INSTANCE.setToolbar(toolbar);
+        setupDailyReminder();
+
         if (actionBar != null) {
             ToolbarHelper.INSTANCE.setActionBar(actionBar);
         }
@@ -92,17 +96,20 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    private void setupDailyReminder() {
+        boolean daily = Prefs.INSTANCE.getDailyReminderSetting(this);
+        if (daily){
+            NotificationHelper.INSTANCE.setupDailyReminder(this);
+        }
+    }
+
     @Override
     public void onBackPressed() {
         if (getSupportFragmentManager().getBackStackEntryCount() == 1){
             showBottomNavigationView(bottomNavigationView);
             ToolbarHelper.INSTANCE.displayBackArrow(false);
-            super.onBackPressed();
-        }else if (getSupportFragmentManager().getBackStackEntryCount() == 0){
-            finish();
-        }else{
-            super.onBackPressed();
         }
+        super.onBackPressed();
     }
 
     @Override

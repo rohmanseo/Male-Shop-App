@@ -70,7 +70,7 @@ class SearchFragment : Fragment(), ProductCallback {
 
     private fun fetchSearch(keyword: String) {
         rvProduct.itemAnimator = null
-        rvProduct.layoutManager = GridLayoutManager(requireContext(), 3)
+        rvProduct.layoutManager = GridLayoutManager(requireContext(), 2)
         adapter = ProductAdapter(requireContext(), this)
         rvProduct.adapter = adapter
 

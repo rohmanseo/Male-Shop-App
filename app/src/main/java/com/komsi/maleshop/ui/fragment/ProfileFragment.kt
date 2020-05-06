@@ -9,7 +9,6 @@ import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import com.androidnetworking.AndroidNetworking
 import com.androidnetworking.common.Priority
 import com.androidnetworking.error.ANError
@@ -17,12 +16,11 @@ import com.androidnetworking.interfaces.JSONObjectRequestListener
 import com.androidnetworking.interfaces.StringRequestListener
 import com.komsi.maleshop.R
 import com.komsi.maleshop.helper.ToolbarHelper
-import com.komsi.maleshop.repository.local.Credential
+import com.komsi.maleshop.persistence.Credential
 import com.komsi.maleshop.ui.activity.LoginActivity
 import com.komsi.maleshop.utils.ConstApi
 import com.komsi.maleshop.utils.bindTextViewWithEditText
 import com.komsi.maleshop.utils.visible
-import kotlinx.android.synthetic.main.fragment_cart.*
 import kotlinx.android.synthetic.main.fragment_profile.*
 import org.json.JSONObject
 
@@ -68,11 +66,6 @@ class ProfileFragment : Fragment(), View.OnClickListener {
 
     private fun updateProfile(nama:String,noTelp:String,alamat:String,foto:String){
 
-        //            'nama' => 'required|min:6',
-        //            'no_telp'=>'required',
-        //            'alamat'=>'required',
-        //            'foto'=>'required',
-
         AndroidNetworking.initialize(requireContext())
         AndroidNetworking.put(ConstApi.UPDATE_PROFILE.value)
                 .addHeaders("Authorization", "Bearer ${Credential.getToken(requireContext())}")
@@ -111,6 +104,7 @@ class ProfileFragment : Fragment(), View.OnClickListener {
                         val noTelp = response.getString("no_telp")
 
                         tvName.bindTextViewWithEditText(edtName,nama)
+                        tv_profile_name.text = nama
                         tvaddress.bindTextViewWithEditText(edtAddress,alamat)
                         tvEmail.bindTextViewWithEditText(edtEmail,email)
                         tvTelp.bindTextViewWithEditText(edtTelp,noTelp)

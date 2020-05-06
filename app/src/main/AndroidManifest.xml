@@ -22,6 +22,7 @@
         </activity>
         <activity android:name="com.komsi.maleshop.ui.activity.LoginActivity" />
         <activity android:name="com.komsi.maleshop.ui.activity.MainActivity" />
+        <receiver android:name=".receiver.AlarmReceiver"/>
     </application>
 
 </manifest>

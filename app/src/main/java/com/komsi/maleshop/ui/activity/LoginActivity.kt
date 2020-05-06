@@ -11,7 +11,7 @@ import com.androidnetworking.error.ANError
 import com.androidnetworking.interfaces.JSONObjectRequestListener
 import com.komsi.maleshop.R
 import com.komsi.maleshop.utils.ConstApi
-import com.komsi.maleshop.repository.local.Credential
+import com.komsi.maleshop.persistence.Credential
 import com.komsi.maleshop.ui.fragment.DialogFragmentLoading
 import kotlinx.android.synthetic.main.activity_login.*
 import org.json.JSONObject

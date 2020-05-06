@@ -9,6 +9,7 @@ enum class ConstApi(val value: String){
     LOGIN("${ENDPOINT.value}/api/auth/login"),
     SLIDESHOW("${ENDPOINT.value}/api/slideshow"),
     NEWPRODUCT("${ENDPOINT.value}/api/produk/new"),
+    ORDER("${ENDPOINT.value}/api/order"),
     COAT("${ENDPOINT.value}/api/kategori/1"),
     SHIRT("${ENDPOINT.value}/api/kategori/2"),
     SEARCH("${ENDPOINT.value}/api/search/"),

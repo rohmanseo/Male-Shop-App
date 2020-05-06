@@ -10,7 +10,7 @@ import com.androidnetworking.common.Priority
 import com.androidnetworking.error.ANError
 import com.androidnetworking.interfaces.JSONObjectRequestListener
 import com.komsi.maleshop.utils.ConstApi
-import com.komsi.maleshop.repository.local.Credential
+import com.komsi.maleshop.persistence.Credential
 import com.komsi.maleshop.model.Slide
 import org.json.JSONObject
 

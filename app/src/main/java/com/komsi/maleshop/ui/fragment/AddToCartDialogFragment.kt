@@ -14,7 +14,7 @@ import com.androidnetworking.interfaces.StringRequestListener
 import com.bumptech.glide.Glide
 import com.komsi.maleshop.R
 import com.komsi.maleshop.model.Produk
-import com.komsi.maleshop.repository.local.Credential
+import com.komsi.maleshop.persistence.Credential
 import com.komsi.maleshop.utils.ConstApi
 import kotlinx.android.synthetic.main.fragment_add_to_cart_dialog.*
 

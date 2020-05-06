@@ -1,4 +1,4 @@
-package com.komsi.maleshop.repository.local
+package com.komsi.maleshop.persistence
 
 import android.content.Context
 

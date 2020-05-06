@@ -29,7 +29,7 @@ class WishlistFragment : Fragment(), ProductCallback {
 
     fun fetchWishlist(){
         recWishlist.itemAnimator = null
-        recWishlist.layoutManager = GridLayoutManager(requireContext(), 3)
+        recWishlist.layoutManager = GridLayoutManager(requireContext(), 2)
         adapter = ProductAdapter(requireContext(), this)
         recWishlist.adapter = adapter
 

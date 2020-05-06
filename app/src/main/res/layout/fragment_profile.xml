@@ -80,7 +80,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:padding="5dp"
-                    android:text="Rizal M" />
+                    android:text="name" />
 
                 <EditText
                     android:id="@+id/edt_name"
@@ -117,7 +117,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:padding="5dp"
-                    android:text="rizal@gmail.com" />
+                    android:text="email" />
 
                 <EditText
                     android:id="@+id/edt_email"
@@ -128,7 +128,7 @@
                     android:layout_weight="2"
                     android:background="@drawable/edit_text_border"
                     android:padding="5dp"
-                    android:text="rizal@gmail.com" />
+                    android:text="email" />
 
             </LinearLayout>
 
@@ -154,7 +154,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:padding="5dp"
-                    android:text="08798754532" />
+                    android:text="0" />
 
                 <EditText
                     android:id="@+id/edt_telp"
@@ -164,7 +164,7 @@
                     android:layout_weight="2"
                     android:background="@drawable/edit_text_border"
                     android:padding="5dp"
-                    android:text="08798754532" />
+                    android:text="0" />
 
             </LinearLayout>
 
@@ -190,7 +190,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:padding="5dp"
-                    android:text="Jl. Pandega Marta No.106B" />
+                    android:text="address" />
 
                 <EditText
                     android:id="@+id/edt_address"
@@ -201,7 +201,7 @@
                     android:layout_weight="2"
                     android:background="@drawable/edit_text_border"
                     android:padding="5dp"
-                    android:text=" Jl. Pandega Marta No.106B" />
+                    android:text="address" />
 
             </LinearLayout>
 

@@ -103,10 +103,11 @@
         </LinearLayout>
 
         <Button
+            android:id="@+id/btnOrder"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
-            android:text="Process to payment"
+            android:text="Process order"
             android:textAllCaps="false"
             android:textColor="@android:color/white"
             android:textSize="20sp"

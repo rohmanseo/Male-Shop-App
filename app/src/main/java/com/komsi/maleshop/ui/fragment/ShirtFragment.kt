@@ -39,7 +39,7 @@ class ShirtFragment : Fragment(), ProductCallback {
 
     fun fetchCoat() {
         rvCategory.itemAnimator = null
-        rvCategory.layoutManager = GridLayoutManager(requireContext(), 3)
+        rvCategory.layoutManager = GridLayoutManager(requireContext(), 2)
         adapter = ProductAdapter(requireContext(),this)
         rvCategory.adapter = adapter
 
@@ -55,7 +55,6 @@ class ShirtFragment : Fragment(), ProductCallback {
     }
 
     override fun onResume() {
-        fetchCoat()
         super.onResume()
     }
 
