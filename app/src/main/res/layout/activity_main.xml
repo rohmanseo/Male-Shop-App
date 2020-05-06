@@ -6,8 +6,11 @@
 
     <androidx.appcompat.widget.Toolbar
         app:titleTextColor="#FFFFFF"
+        android:visibility="visible"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         android:background="@color/colorPrimary"
         android:id="@+id/toolbar"
+        app:title="Home"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"/>
 
@@ -24,7 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="#cccccc"
+        android:background="@android:color/white"
         app:menu="@menu/menu_navigation_bottom" />
 
 </RelativeLayout>
