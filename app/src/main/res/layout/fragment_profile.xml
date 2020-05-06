@@ -23,7 +23,7 @@
             android:layout_below="@id/img_profile"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30dp"
-            android:text="Rizal M"
+            android:text="name"
             android:textColor="@color/colorPrimary"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -34,12 +34,23 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_profile_name"
             android:layout_marginTop="50dp"
-            android:text="Informasi Pribadi"
+            android:text="Profile details"
             android:textColor="@color/colorPrimary"
             android:textSize="20sp"
             android:textStyle="bold" />
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit"
+            android:layout_alignParentRight="true"
+            android:layout_toLeftOf="@id/tv_info_pribadi"
+            android:layout_marginTop="50dp"
+            android:layout_below="@id/tv_profile_name"
+            android:id="@+id/btnEdit"/>
+
         <LinearLayout
+            android:id="@+id/layout_info"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@id/tv_info_pribadi"
@@ -56,7 +67,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Nama"
+                    android:text="Name"
                     android:textColor="@color/colorPrimary"
                     android:textSize="15sp"
                     android:textStyle="bold" />
@@ -65,10 +76,11 @@
                     android:id="@+id/tv_name"
                     android:textColor="@android:color/black"
                     android:layout_width="0dp"
+                    android:textSize="15sp"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:padding="5dp"
-                    android:text="Rizal M" />
+                    android:text="name" />
 
                 <EditText
                     android:id="@+id/edt_name"
@@ -79,17 +91,7 @@
                     android:background="@drawable/edit_text_border"
                     android:padding="5dp"
                     android:text="Rizal M" />
-                <ImageView
-                    android:id="@+id/btn_edit_name"
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
-                    android:src="@drawable/btn_edit"/>
-                <ImageView
-                    android:id="@+id/btn_edit_name_success"
-                    android:visibility="gone"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/ic_done_black_24dp"/>
+
 
             </LinearLayout>
 
@@ -115,28 +117,18 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:padding="5dp"
-                    android:text="rizal@gmail.com" />
+                    android:text="email" />
 
                 <EditText
                     android:id="@+id/edt_email"
                     android:visibility="gone"
                     android:layout_width="0dp"
+                    android:textSize="15sp"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:background="@drawable/edit_text_border"
                     android:padding="5dp"
-                    android:text="rizal@gmail.com" />
-                <ImageView
-                    android:id="@+id/btn_edit_email"
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
-                    android:src="@drawable/btn_edit"/>
-                <ImageView
-                    android:id="@+id/btn_edit_email_success"
-                    android:visibility="gone"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/ic_done_black_24dp"/>
+                    android:text="email" />
 
             </LinearLayout>
 
@@ -150,7 +142,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="No Telp"
+                    android:text="Phone"
                     android:textColor="@color/colorPrimary"
                     android:textSize="15sp"
                     android:textStyle="bold" />
@@ -162,7 +154,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:padding="5dp"
-                    android:text="08798754532" />
+                    android:text="0" />
 
                 <EditText
                     android:id="@+id/edt_telp"
@@ -172,18 +164,7 @@
                     android:layout_weight="2"
                     android:background="@drawable/edit_text_border"
                     android:padding="5dp"
-                    android:text="08798754532" />
-                <ImageView
-                    android:id="@+id/btn_edt_telp"
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
-                    android:src="@drawable/btn_edit"/>
-                <ImageView
-                    android:id="@+id/btn_edt_telp_success"
-                    android:visibility="gone"
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
-                    android:src="@drawable/ic_done_black_24dp"/>
+                    android:text="0" />
 
             </LinearLayout>
 
@@ -197,7 +178,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Alamat"
+                    android:text="Address"
                     android:textColor="@color/colorPrimary"
                     android:textSize="15sp"
                     android:textStyle="bold" />
@@ -209,56 +190,21 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:padding="5dp"
-                    android:text="Jl. Pandega Marta No.106B" />
+                    android:text="address" />
 
                 <EditText
                     android:id="@+id/edt_address"
                     android:visibility="gone"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:background="@drawable/edit_text_border"
-                    android:padding="5dp"
-                    android:text=" Jl. Pandega Marta No.106B" />
-                <ImageView
-                    android:id="@+id/btn_edt_address"
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
-                    android:src="@drawable/btn_edit"/>
-                <ImageView
-                    android:id="@+id/btn_edt_address_success"
-                    android:visibility="gone"
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
-                    android:src="@drawable/ic_done_black_24dp"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Password"
-                    android:textColor="@color/colorPrimary"
                     android:textSize="15sp"
-                    android:textStyle="bold" />
-
-                <EditText
-                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:background="@drawable/edit_text_border"
-                    android:inputType="textPassword"
                     android:padding="5dp"
-                    android:text="Rizal M" />
+                    android:text="address" />
 
             </LinearLayout>
+
 
         </LinearLayout>
 
@@ -266,10 +212,10 @@
             android:id="@+id/btn_logout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/layout_info"
             android:layout_marginTop="30dp"
             android:background="@color/colorPrimary"
-            android:text="Keluar"
+            android:text="Logout"
             android:textColor="@android:color/white" />
 
     </RelativeLayout>

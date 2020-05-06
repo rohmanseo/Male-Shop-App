@@ -1,32 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
     <RelativeLayout
+        android:focusableInTouchMode="true"
+        android:focusable="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        >
+        android:background="@android:color/white"
+        android:layout_marginTop="5dp">
 
 
         <androidx.appcompat.widget.SearchView
+            android:id="@+id/svProduct"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
             android:focusable="false"
-            android:id="@+id/sv_cari"
+            android:layout_marginLeft="16dp"
+            app:iconifiedByDefault="false"
+            app:queryBackground="@android:color/transparent"
+            app:queryHint="Search for. . ."
+            android:layout_marginStart="16dp" />
+
+        <ImageButton
+            android:layout_marginRight="16dp"
+            android:id="@+id/imgSetting"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:background="#F8F4F4"
-            app:iconifiedByDefault="false"
-            app:queryHint="Search Product" />
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/transparent"
+            android:padding="12dp"
+            android:src="@drawable/adjust"
+            android:layout_marginEnd="16dp" />
 
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/slider_pager"
             android:layout_width="fill_parent"
             android:layout_height="183dp"
-            android:layout_below="@id/sv_cari">
+            android:layout_below="@id/svProduct"
+            android:layout_marginTop="30dp">
 
         </androidx.viewpager.widget.ViewPager>
 
@@ -34,7 +49,7 @@
             android:id="@+id/indicator"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="190dp"
+            android:layout_below="@id/slider_pager"
             app:tabBackground="@drawable/indicator_selector"
             app:tabGravity="center">
 
@@ -44,8 +59,9 @@
             android:id="@+id/text_arrival"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/slider_pager"
-            android:layout_marginLeft="12dp"
+            android:layout_below="@+id/indicator"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
             android:layout_marginTop="15dp"
             android:text="New Arrival"
             android:textColor="@android:color/black"
@@ -55,21 +71,26 @@
             android:id="@+id/text_seeArrival"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/slider_pager"
+            android:layout_below="@id/indicator"
+            android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_marginTop="17dp"
-            android:layout_marginRight="20dp"
-            android:text="see all"
-            android:textSize="15sp" />
+            android:layout_marginRight="16dp"
+            android:text="More"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginEnd="16dp" />
 
-
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_below="@id/text_arrival"
+            android:id="@+id/rv_Arrival"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="20dp"
+            android:clipToPadding="false"
+            android:paddingBottom="100dp" />
     </RelativeLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_Arrival"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginLeft="12dp"
-        android:layout_marginTop="20dp" />
-
-</LinearLayout>
+</androidx.core.widget.NestedScrollView>

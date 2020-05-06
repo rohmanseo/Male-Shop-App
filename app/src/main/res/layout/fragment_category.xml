@@ -2,6 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:clickable="true"
+    android:fitsSystemWindows="false"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -11,15 +13,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
+        app:tabIndicatorColor="@color/colorPrimary"
+        app:tabIndicatorAnimationDuration="@android:integer/config_mediumAnimTime"
         app:tabMode="fixed"
         app:tabTextColor="@android:color/darker_gray"
-        app:tabGravity="fill"
+        app:tabSelectedTextColor="@android:color/black"
+        app:tabGravity="center"
         />
 
     <androidx.viewpager.widget.ViewPager
-        android:layout_below="@id/tablayout_id"
+        android:padding="16dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/viewPager_id"/>
 
 </LinearLayout>
