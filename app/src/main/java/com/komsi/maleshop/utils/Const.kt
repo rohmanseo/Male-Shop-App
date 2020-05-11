@@ -1,7 +1,7 @@
 package com.komsi.maleshop.utils
 
 enum class ConstApi(val value: String){
-    ENDPOINT("http://192.168.25.105"),
+    ENDPOINT("http://192.168.0.4"),
 
     //data
     REGISTER("${ENDPOINT.value}/api/auth/register"),

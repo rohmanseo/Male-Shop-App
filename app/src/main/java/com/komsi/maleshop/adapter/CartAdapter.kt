@@ -18,6 +18,8 @@ import com.komsi.maleshop.R
 import com.komsi.maleshop.model.Cart
 import com.komsi.maleshop.persistence.Credential
 import com.komsi.maleshop.utils.ConstApi
+import java.text.DecimalFormat
+import java.text.NumberFormat
 import java.util.*
 
 class CartAdapter(private val context: Context,private val callback:ProductCallback) : RecyclerView.Adapter<CartAdapter.ViewHolder>() {
@@ -37,7 +39,7 @@ class CartAdapter(private val context: Context,private val callback:ProductCallb
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         Glide.with(context).load(ConstApi.PRODUCT_IMAGE_URL.value + list[position].foto).into(holder.imgCart)
         holder.cartTitle.text = list[position].nama
-        holder.cartPrize.text = list[position].harga.toString()
+        holder.cartPrize.text = addCurrency(list[position].harga)
         holder.tvQty.text = list[position].qty
 
         holder.imgRemove.setOnClickListener {
@@ -71,7 +73,11 @@ class CartAdapter(private val context: Context,private val callback:ProductCallb
     override fun getItemCount(): Int {
         return list.size
     }
-
+    fun addCurrency(price: Double): String{
+        val formatter: NumberFormat = DecimalFormat("#,###")
+        val price = "Rp ${formatter.format(price)}"
+        return price
+    }
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val cartTitle: TextView = itemView.findViewById(R.id.tv_nama_cart)
         val cartPrize: TextView = itemView.findViewById(R.id.tv_harga_cart)

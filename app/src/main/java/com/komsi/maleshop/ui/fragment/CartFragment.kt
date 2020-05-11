@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.androidnetworking.AndroidNetworking
 import com.androidnetworking.common.Priority
 import com.androidnetworking.error.ANError
+import com.androidnetworking.interfaces.JSONObjectRequestListener
 import com.androidnetworking.interfaces.StringRequestListener
 import com.komsi.maleshop.R
 import com.komsi.maleshop.adapter.CartAdapter
@@ -28,12 +29,16 @@ import com.komsi.maleshop.utils.ConstApi
 import com.komsi.maleshop.utils.toaster
 import com.komsi.maleshop.viewmodel.CartViewModel
 import kotlinx.android.synthetic.main.fragment_cart.*
+import org.json.JSONObject
+import java.text.DecimalFormat
+import java.text.NumberFormat
 
 class CartFragment : Fragment(), ProductCallback, View.OnClickListener {
     private lateinit var adapter: CartAdapter
     private lateinit var rvCart: RecyclerView
     private lateinit var tvTotal: TextView
     private lateinit var dialogLoading: DialogFragmentLoading
+    private lateinit var tvAddressShip: TextView
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_cart, container, false)
@@ -43,25 +48,23 @@ class CartFragment : Fragment(), ProductCallback, View.OnClickListener {
         super.onViewCreated(view, savedInstanceState)
         rvCart = view.findViewById(R.id.rv_cart) as RecyclerView
         tvTotal = view.findViewById(R.id.tv_total) as TextView
+        tvAddressShip = view.findViewById(R.id.tvAddressShip) as TextView
         dialogLoading = DialogFragmentLoading()
 
-        btn_open_alamat.setOnClickListener{
-            val intent = Intent(activity,AlamatActivity::class.java)
+        fetchProfileData()
+
+        btn_open_alamat.setOnClickListener {
+            val intent = Intent(activity, AlamatActivity::class.java)
             startActivity(intent)
         }
-
-
 
         btnOrder.setOnClickListener(this)
         fetchCart()
 
         btnOrder.setOnClickListener {
-            val intent = Intent (activity,PaymentActivity::class.java)
+            val intent = Intent(activity, PaymentActivity::class.java)
             startActivity(intent)
         }
-
-
-
 
     }
 
@@ -78,20 +81,44 @@ class CartFragment : Fragment(), ProductCallback, View.OnClickListener {
         cartViewModel.setList(requireActivity())
         cartViewModel.getList().observe(requireActivity(), androidx.lifecycle.Observer { contents ->
             adapter.setData(contents)
-            tvTotal.text = getTotalPrice(contents).toString()
+            tvTotal.text = getTotalPrice(contents)
         })
     }
 
-    fun getTotalPrice(list: ArrayList<Cart>): Double{
-        var price  = 0.0
+    private fun fetchProfileData() {
+        AndroidNetworking.initialize(requireContext())
+        AndroidNetworking.post(ConstApi.PROFILE.value)
+                .addHeaders("Authorization", "Bearer ${Credential.getToken(requireContext())}")
+                .setTag("profile")
+                .setPriority(Priority.HIGH)
+                .build()
+                .getAsJSONObject(object : JSONObjectRequestListener {
+                    override fun onResponse(response: JSONObject) {
+                        Log.d("profileResponse", response.toString())
+                        tvAddressShip.text = response.getString("alamat")
+
+                    }
+
+                    override fun onError(anError: ANError?) {
+                        Log.d("profileResponse", anError.toString())
+                    }
+                })
+    }
+
+    fun getTotalPrice(list: ArrayList<Cart>): String {
+        var price = 0.0
         list.map {
             price += it.harga * it.qty.toDouble()
         }
-        return price
+        return addCurrency(price)
     }
-
+    fun addCurrency(price: Double): String{
+        val formatter: NumberFormat = DecimalFormat("#,###")
+        return "Rp ${formatter.format(price)}"
+    }
     override fun onResume() {
         ToolbarHelper.setTitle(getString(R.string.cart))
+        fetchProfileData()
         super.onResume()
     }
 
@@ -104,9 +131,9 @@ class CartFragment : Fragment(), ProductCallback, View.OnClickListener {
     }
 
     override fun onClick(p0: View) {
-        when(p0.id){
+        when (p0.id) {
             R.id.btnOrder -> {
-                dialogLoading.show(requireFragmentManager(),"order")
+                dialogLoading.show(requireFragmentManager(), "order")
                 processOrder()
                 fetchCart()
             }
@@ -120,7 +147,7 @@ class CartFragment : Fragment(), ProductCallback, View.OnClickListener {
                 .setTag("order")
                 .setPriority(Priority.HIGH)
                 .build()
-                .getAsString(object : StringRequestListener{
+                .getAsString(object : StringRequestListener {
                     override fun onResponse(response: String?) {
                         "Success".toaster(requireContext())
                         dialogLoading.dismiss()

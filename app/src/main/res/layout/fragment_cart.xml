@@ -10,21 +10,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-
-
-
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/btn_open_alamat"
-                android:text="@string/tambah_alamat"
-
-                />
 
             <TextView
                 android:id="@+id/tvCart"
@@ -32,16 +20,15 @@
                 android:layout_height="wrap_content"
                 android:text="@string/cart"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                android:layout_below="@id/btn_open_alamat"/>
+                android:textStyle="bold" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_cart"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:focusable="true"
                 android:layout_below="@id/tvCart"
-                android:layout_marginTop="10dp" />
+                android:layout_marginTop="10dp"
+                android:focusable="true" />
 
             <TextView
                 android:id="@+id/tvShippingDetails"
@@ -49,7 +36,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/rv_cart"
                 android:layout_marginTop="15dp"
-                android:text="Shipping details"
+                android:text="@string/shipping_details"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -60,10 +47,10 @@
                 android:layout_marginTop="10dp">
 
                 <LinearLayout
-                    android:padding="16dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:padding="16dp">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -77,6 +64,26 @@
                         android:layout_height="wrap_content"
                         android:text="@string/address"
                         android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:id="@+id/btn_open_alamat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/ic_my_location_black_24dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/add_location"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
         </RelativeLayout>
@@ -107,8 +114,8 @@
                 android:id="@+id/tv_total"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0"
                 android:layout_marginLeft="20dp"
+                android:text="0"
                 android:textColor="@color/colorPrimary"
                 android:textSize="20sp"
                 android:textStyle="bold" />

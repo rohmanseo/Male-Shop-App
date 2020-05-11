@@ -59,4 +59,6 @@
     <string name="logout">Keluar</string>
     <string name="searchfor_search">Cari barang</string>
     <string name="payment">Pembayaran</string>
+    <string name="add_location">Tambah lokasi</string>
+
 </resources>
