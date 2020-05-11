@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.Toolbar
+            app:title="@string/payment"
+            android:id="@+id/toolbar_payment"
+            android:layout_width="match_parent"
+            app:titleTextColor="@android:color/white"
+            android:background="@color/colorPrimary"
+            android:layout_height="?attr/actionBarSize"
+            />
+        <ImageView
+            android:layout_marginTop="12dp"
+            android:id="@+id/img_payment"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:src="@drawable/payment"
+
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Terima Kasih "
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+
+            />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Silakan Anda Transfer ke Salah Satu Rekening di Bawah Ini : "
+            android:textSize="15sp"
+            android:layout_marginLeft="10dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            />
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Info Bank"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="15sp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bank BNI 501-0983-981 a/n Rohman"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            />
+        <Button
+            android:layout_marginTop="20dp"
+            android:id="@+id/btn_back_home"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:padding="20dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimary"
+            android:text="Kembali Belanja"
+            android:textSize="15sp"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

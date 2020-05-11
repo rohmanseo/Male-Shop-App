@@ -51,6 +51,8 @@ class ProfileFragment : Fragment(), View.OnClickListener {
         btn_logout.setOnClickListener(this)
         btnEdit.setOnClickListener(this)
 
+
+
         tvName = view.findViewById(R.id.tv_name) as TextView
         tvEmail = view.findViewById(R.id.tv_email) as TextView
         tvaddress = view.findViewById(R.id.tv_address) as TextView

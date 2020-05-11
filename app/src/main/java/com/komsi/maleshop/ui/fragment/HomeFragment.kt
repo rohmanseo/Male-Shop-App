@@ -115,7 +115,7 @@ class HomeFragment : Fragment(), ProductCallback {
     }
 
     override fun onResume() {
-        ToolbarHelper.setTitle("Home")
+        ToolbarHelper.setTitle(getString(R.string.home))
         super.onResume()
     }
 

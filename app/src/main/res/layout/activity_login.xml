@@ -42,7 +42,7 @@
         android:layout_below="@id/edt_password"
         android:layout_marginTop="20dp"
         android:background="@color/colorPrimary"
-        android:text="Login"
+        android:text="@string/login"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
@@ -55,7 +55,7 @@
         android:layout_below="@id/btn_login"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:text="Login Cepat Dengan"
+        android:text="@string/login_cepat_dengan"
         android:textSize="15sp"
         android:textStyle="bold" />
 
@@ -95,7 +95,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30dp"
-            android:text="Belum Punya Akun?"
+            android:text="@string/belum_punya_akun"
             android:textSize="15sp"
             android:textStyle="bold" />
 
@@ -105,7 +105,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="30dp"
-            android:text="Daftar Sekarang"
+            android:text="@string/daftar_sekarang"
             android:textColor="@color/colorPrimary"
             android:textSize="15sp"
             android:textStyle="bold" />

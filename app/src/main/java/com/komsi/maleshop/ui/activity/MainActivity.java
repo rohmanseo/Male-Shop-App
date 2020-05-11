@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -65,28 +66,28 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.navigation_home:
-                        toolbar.setTitle("Home");
+                        toolbar.setTitle(R.string.home);
                         selectedFragment = new HomeFragment();
                         break;
                     case R.id.navigation_category:
 //                        toolbar.setTitle("Category");
-                        ToolbarHelper.INSTANCE.setTitle("Category");
+                        ToolbarHelper.INSTANCE.setTitle(getString(R.string.category));
                         selectedFragment = new CategoryFragment();
                         break;
                     case R.id.navigation_cart:
 //                        toolbar.setTitle("Cart");
-                        ToolbarHelper.INSTANCE.setTitle("Cart");
+                        ToolbarHelper.INSTANCE.setTitle(getString(R.string.cart));
                         selectedFragment = new CartFragment();
 
                         break;
                     case R.id.navigation_wishlist:
 //                        toolbar.setTitle("Wishlist");
-                        ToolbarHelper.INSTANCE.setTitle("Wishlist");
+                        ToolbarHelper.INSTANCE.setTitle(getString(R.string.wishlist));
                         selectedFragment = new WishlistFragment();
                         break;
                     case R.id.navigation_profile:
 //                        toolbar.setTitle("Profile");
-                        ToolbarHelper.INSTANCE.setTitle("Profile");
+                        ToolbarHelper.INSTANCE.setTitle(getString(R.string.profile));
                         selectedFragment = new ProfileFragment();
                         break;
                 }

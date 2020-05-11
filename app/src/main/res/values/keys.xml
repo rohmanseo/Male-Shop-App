@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- TODO: Move to Firebase remote configs -->
+    <string name="key_google_apis_android" translatable="false">com.google.android.geo.API_KEY</string>
+    <string name="key_google_apis_maps" translatable="false">AIzaSyA0ED5hntvUVjdlgDVD3aM6_ZiwEXWSC3E</string>
+
+</resources>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -23,7 +24,7 @@
             android:layout_below="@id/img_profile"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30dp"
-            android:text="name"
+            android:text="@string/name"
             android:textColor="@color/colorPrimary"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -34,7 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_profile_name"
             android:layout_marginTop="50dp"
-            android:text="Profile details"
+            android:text="@string/profile_details"
             android:textColor="@color/colorPrimary"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -42,7 +43,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Edit"
+            android:text="@string/edit"
             android:layout_alignParentRight="true"
             android:layout_toLeftOf="@id/tv_info_pribadi"
             android:layout_marginTop="50dp"
@@ -67,10 +68,11 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Name"
+                    android:text="@string/name_profil"
                     android:textColor="@color/colorPrimary"
                     android:textSize="15sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
 
                 <TextView
                     android:id="@+id/tv_name"
@@ -142,7 +144,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Phone"
+                    android:text="@string/phone_profil"
                     android:textColor="@color/colorPrimary"
                     android:textSize="15sp"
                     android:textStyle="bold" />
@@ -178,7 +180,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Address"
+                    android:text="@string/address_profil"
                     android:textColor="@color/colorPrimary"
                     android:textSize="15sp"
                     android:textStyle="bold" />
@@ -215,7 +217,7 @@
             android:layout_below="@+id/layout_info"
             android:layout_marginTop="30dp"
             android:background="@color/colorPrimary"
-            android:text="Logout"
+            android:text="@string/logout"
             android:textColor="@android:color/white" />
 
     </RelativeLayout>

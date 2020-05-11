@@ -68,5 +68,5 @@
         android:layout_below="@id/layout_counter"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:text="Add" />
+        android:text="@string/add" />
 </RelativeLayout>

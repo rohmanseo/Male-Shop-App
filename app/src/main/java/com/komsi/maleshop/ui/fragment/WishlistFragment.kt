@@ -44,7 +44,7 @@ class WishlistFragment : Fragment(), ProductCallback {
     }
 
     override fun onResume() {
-        ToolbarHelper.setTitle("Wishlist")
+        ToolbarHelper.setTitle(getString(R.string.wishlist))
         super.onResume()
     }
 

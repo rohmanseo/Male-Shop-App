@@ -37,7 +37,7 @@ class AddToCartDialogFragment : DialogFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        dialog?.setTitle("Add to Cart?")
+        dialog?.setTitle(getString(R.string.addtocart))
 
         val produk = arguments?.getParcelable<Produk>("product")
         val url = ConstApi.PRODUCT_IMAGE_URL.value + produk?.foto

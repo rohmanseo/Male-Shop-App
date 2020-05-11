@@ -29,7 +29,6 @@ class SignUpActivity : AppCompatActivity() {
             finish()
         }
 
-        Toast.makeText(this, ConstApi.REGISTER.value, Toast.LENGTH_LONG).show()
         btn_signup.setOnClickListener {
 //            startActivity(Intent(this@SignUpActivity, MainActivity::class.java))
             register(edt_nama.text.toString(),edt_email.text.toString(),edt_password.text.toString())

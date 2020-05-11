@@ -23,7 +23,7 @@ public class ArrivalActivity extends AppCompatActivity {
         recyclerView=findViewById(R.id.rvArrival);
 
         toolbar = findViewById(R.id.toolbar);
-        toolbar.setTitle("New Arrival");
+        toolbar.setTitle(R.string.NewArrival);
         setSupportActionBar(toolbar);
 
 

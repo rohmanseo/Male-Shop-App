@@ -5,10 +5,6 @@
     <color name="colorAccent">#0F3142</color>
 
     <color name="grey">#cccccc</color>
-    <color name="third">#3b6978</color>
-    <color name="second">#cae8d5</color>
-    <color name="first">#84a9ac</color>
-    <color name="four">#204051</color>
-    <color name="unselect">#b3ffffff</color>
+    <color name="colorSecond"> #122836</color>
 
 </resources>

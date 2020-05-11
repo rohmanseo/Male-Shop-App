@@ -1,5 +1,6 @@
 package com.komsi.maleshop.ui.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -21,6 +22,8 @@ import com.komsi.maleshop.helper.ToolbarHelper
 import com.komsi.maleshop.model.Cart
 import com.komsi.maleshop.model.Produk
 import com.komsi.maleshop.persistence.Credential
+import com.komsi.maleshop.ui.activity.AlamatActivity
+import com.komsi.maleshop.ui.activity.PaymentActivity
 import com.komsi.maleshop.utils.ConstApi
 import com.komsi.maleshop.utils.toaster
 import com.komsi.maleshop.viewmodel.CartViewModel
@@ -41,8 +44,24 @@ class CartFragment : Fragment(), ProductCallback, View.OnClickListener {
         rvCart = view.findViewById(R.id.rv_cart) as RecyclerView
         tvTotal = view.findViewById(R.id.tv_total) as TextView
         dialogLoading = DialogFragmentLoading()
+
+        btn_open_alamat.setOnClickListener{
+            val intent = Intent(activity,AlamatActivity::class.java)
+            startActivity(intent)
+        }
+
+
+
         btnOrder.setOnClickListener(this)
         fetchCart()
+
+        btnOrder.setOnClickListener {
+            val intent = Intent (activity,PaymentActivity::class.java)
+            startActivity(intent)
+        }
+
+
+
 
     }
 
@@ -72,7 +91,7 @@ class CartFragment : Fragment(), ProductCallback, View.OnClickListener {
     }
 
     override fun onResume() {
-        ToolbarHelper.setTitle("Cart")
+        ToolbarHelper.setTitle(getString(R.string.cart))
         super.onResume()
     }
 

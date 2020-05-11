@@ -10,7 +10,7 @@
         app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         android:background="@color/colorPrimary"
         android:id="@+id/toolbar"
-        app:title="Home"
+        app:title="@string/home"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"/>
 

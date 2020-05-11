@@ -5,14 +5,21 @@ apply plugin: 'kotlin-android-extensions'
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
     defaultConfig {
         applicationId "com.komsi.maleshop"
-        minSdkVersion 16
+        minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
+
     androidExtensions {
         experimental = true
     }
@@ -47,6 +54,10 @@ dependencies {
     implementation 'com.amitshekhar.android:android-networking:1.0.2'
     implementation 'com.github.armcha:PlayTabLayout:2.0.0'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    implementation 'com.google.android.libraries.places:places:2.0.0'
+    implementation 'com.github.rtchagas:pingplacepicker:2.0.+'
+    implementation "org.jetbrains.anko:anko-commons:0.10.8"
 }
 repositories {
     mavenCentral()

@@ -20,7 +20,7 @@
         android:layout_marginBottom="10dp"
         android:background="@drawable/edit_text_border"
         android:ems="10"
-        android:hint="Nama Lengkap"
+        android:hint="@string/nama_lengkap"
         android:inputType="textPersonName"
         android:padding="15dp" />
 
@@ -53,7 +53,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/edt_password"
-        android:text="Saya telah membaca dan menyetujui Aturan" />
+        android:text="@string/saya_telah_membaca_dan_menyetujui_aturan" />
 
     <Button
         android:id="@+id/btn_signup"
@@ -62,7 +62,7 @@
         android:layout_below="@id/cek_remember"
         android:layout_marginTop="20dp"
         android:background="@color/colorPrimary"
-        android:text="Daftar"
+        android:text="@string/sign_up"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
@@ -75,7 +75,7 @@
         android:layout_below="@id/btn_signup"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:text="Atau"
+        android:text="@string/atau"
         android:textSize="15sp"
         android:textStyle="bold" />
 

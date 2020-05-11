@@ -40,8 +40,10 @@ class CategoryFragment : Fragment() {
 
     fun setupTabLayout(){
         adapter = PagerAdapter(childFragmentManager)
-        adapter.addFragment(CoatFragment(), "Coat")
-        adapter.addFragment(ShirtFragment(), "Shirt")
+        adapter.run {
+            addFragment(CoatFragment(), getString(R.string.coat))
+            addFragment(ShirtFragment(), getString(R.string.shirt))
+        }
 
         vpLayout.adapter = adapter
         vpLayout.offscreenPageLimit = 1

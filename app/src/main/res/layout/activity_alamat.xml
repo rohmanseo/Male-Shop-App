@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.AlamatActivity">
+    <androidx.appcompat.widget.Toolbar
+        app:title="@string/TambahAlamat"
+        android:id="@+id/toolbar"
+        app:titleTextColor="@android:color/white"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_marginBottom="80dp"
+
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:id="@+id/line1"
+            >
+
+
+            <TextView
+                android:id="@+id/tv_alamat_nama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nama_penerima"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="2dp"
+                android:textColor="@color/colorPrimary"
+
+                />
+            <EditText
+                android:id="@+id/et_alamat_inputnama"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:padding="12dp"
+                android:hint="@string/masukkan_nama_penerima"
+                android:textSize="12sp"
+                android:inputType="text"
+                android:background="@drawable/shape_rectangle_line_primary"
+
+                />
+            <TextView
+                android:id="@+id/tv_alamat_notelp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nomer_telepon"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="2dp"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginTop="5dp"
+
+                />
+            <EditText
+                android:id="@+id/et_alamat_inputnotelp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:padding="12dp"
+                android:hint="@string/masukkan_nomer_telepon"
+                android:inputType="phone"
+                android:textSize="12sp"
+                android:background="@drawable/shape_rectangle_line_primary"
+                />
+
+
+            <TextView
+                android:id="@+id/tv_alamat_provinsi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/provinsi"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="2dp"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginTop="5dp"
+
+                />
+            <EditText
+                android:id="@+id/et_alamat_inputprovinsi"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:padding="12dp"
+                android:hint="@string/provinsi"
+                android:textSize="12sp"
+                android:background="@drawable/shape_rectangle_line_primary"
+                />
+            <TextView
+                android:id="@+id/tv_alamat_kota"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/kota"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="2dp"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginTop="5dp"
+
+                />
+            <EditText
+                android:id="@+id/et_alamat_inputkota"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:padding="12dp"
+                android:hint="@string/kota"
+                android:inputType="phone"
+                android:textSize="12sp"
+                android:background="@drawable/shape_rectangle_line_primary"
+                />
+            <TextView
+                android:id="@+id/tv_alamat_Kecamatan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/kecamatan"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="2dp"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginTop="5dp"
+
+                />
+            <EditText
+                android:id="@+id/et_alamat_inputkecamatan"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:padding="12dp"
+                android:hint="@string/kecamatan"
+                android:textSize="12sp"
+                android:background="@drawable/shape_rectangle_line_primary"
+
+                />
+            <TextView
+                android:id="@+id/tv_alamat_desa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/kelurahan"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="2dp"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginTop="5dp"
+
+                />
+            <EditText
+                android:id="@+id/et_alamat_inputdesa"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:padding="12dp"
+                android:hint="@string/kelurahan"
+                android:textSize="12sp"
+                android:background="@drawable/shape_rectangle_line_primary"
+                />
+            <TextView
+                android:id="@+id/tv_alamat_alamatlengkap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/alamat_lengkap"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="2dp"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginTop="5dp"
+
+                />
+            <EditText
+                android:id="@+id/et_alamat_inputalamatlengkap"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:padding="12dp"
+                android:hint="@string/alamat_lengkap"
+                android:textSize="12sp"
+                android:background="@drawable/shape_rectangle_line_primary"
+                />
+            <Button
+                android:id="@+id/btnOpenPlacePicker"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+
+                android:text="@string/cari_melalui_maps"
+
+                />
+
+
+        </LinearLayout>
+    </ScrollView>
+    <Button
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/simpan"
+        android:layout_alignParentBottom="true"
+        android:textColor="#ffffff"
+        android:background="@color/colorPrimary"
+        />
+</RelativeLayout>

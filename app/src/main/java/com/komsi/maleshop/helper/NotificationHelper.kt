@@ -45,6 +45,7 @@ object NotificationHelper {
                     NotificationManager.IMPORTANCE_DEFAULT
             )
             channel.enableVibration(false)
+            channel.description = channelName
             builder.setChannelId(channelId)
             notifManager.createNotificationChannel(channel)
         }
